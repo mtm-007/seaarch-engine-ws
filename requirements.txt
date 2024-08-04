@@ -2,3 +2,5 @@ tqdm
 elasticsearch
 scikit-learn
 pandas
+python-dotenv
+groq

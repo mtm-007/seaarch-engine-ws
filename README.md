@@ -5,8 +5,22 @@
 - started all the way from sparse bag of words for exact word match while using cosine similarity score, then to using SVD for reduced dim -> dense vector embeddings
 - Using the cosine similarity score created an indices for the ranked documents 
 
+## LLM - Llama 3.1-8B
+- Using Groq to serve Llama 3.1- 8b
+
 ## Elastic search
 - practical use case...
 
 ## Using Codspaces
 - as this project uses codespaces the library dependencies in the requirements.txt is a long list, most are pre-configured by codespace 
+- Docer run for elastic search within codespaces
+"""
+docker run -it \
+    --rm \
+    --name elasticsearch \
+    -p 9200:9200 \
+    -p 9300:9300 \
+    -e "discovery.type=single-node" \
+    -e "xpack.security.enabled=false" \
+    docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+"""
