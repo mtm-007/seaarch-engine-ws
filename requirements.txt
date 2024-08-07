@@ -6,4 +6,5 @@ python-dotenv
 groq
 transformers 
 accelerate 
-bitsandbytes 
+bitsandbytes
+openai 
