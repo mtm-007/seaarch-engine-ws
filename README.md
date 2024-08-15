@@ -5,9 +5,15 @@
 - started all the way from sparse bag of words for exact word match while using cosine similarity score, then to using SVD for reduced dim -> dense vector embeddings
 - Using the cosine similarity score created an indices for the ranked documents 
 
-## LLM - Llama 3.1-8B
+## LLM -
 - Using Groq to serve Llama 3.1- 8b
+- Serving with Ollama -- phi3, gemma2:2b
 
+## Serving UI
+- Streamlit UI
+
+## containrize and docker
+- docker-compose 
 ## Elastic search
 - practical use case...
 
