@@ -10,3 +10,4 @@ bitsandbytes
 openai 
 ollama
 streamlit
+sentence_transformers==2.7.0
