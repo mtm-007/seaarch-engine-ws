@@ -4,10 +4,11 @@ scikit-learn
 pandas
 python-dotenv
 groq
-transformers 
-accelerate 
+transformers
+accelerate
 bitsandbytes
-openai 
+openai
 ollama
 streamlit
 sentence_transformers==2.7.0
+jupyterlab

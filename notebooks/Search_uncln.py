@@ -13,7 +13,7 @@ import numpy as np
 # In[15]:
 
 
-import requests 
+import requests
 
 docs_url = 'https://github.com/alexeygrigorev/llm-rag-workshop/raw/main/notebooks/documents.json'
 docs_response = requests.get(docs_url)
@@ -449,7 +449,3 @@ sentence_embeddings
 
 
 # In[ ]:
-
-
-
-
