@@ -641,7 +641,7 @@ On any Python-enabled device or platform, you can use the urllib.request.urlretr
 (Mohammad Emad Sharifi)",49f9bda9,"How can I download a CSV file from a URL using pandas, and what should I consider regarding URL schemes?",machine-learning-zoomcamp
 125,"To download a CSV file directly into your notebook, you can use the following commands:
 
-1. **Using wget:** 
+1. **Using wget:**
    ```python
    !wget https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
    ```
@@ -652,7 +652,7 @@ On any Python-enabled device or platform, you can use the urllib.request.urlretr
    curl -o ./housing.csv https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
    ```
 
-3. **Using Python libraries:** 
+3. **Using Python libraries:**
    - Using `urllib`:
      ```python
      import urllib.request
@@ -743,7 +743,7 @@ After completing these steps, you will be set up to use WSL on your Windows 11 d
 134,The WSL extension for VS Code allows you to remotely connect to your WSL Ubuntu instance as if it was a virtual machine.,(Tyler Simpson),314ebe32,What does the WSL extension for VS Code allow me to do with my Ubuntu instance?,machine-learning-zoomcamp
 135,"To correctly upload your homework to GitHub if you're encountering an error message, follow these steps:
 
-1. If you see the error message ""error: src refspec master does not match any,"" it indicates that the master branch does not exist. 
+1. If you see the error message ""error: src refspec master does not match any,"" it indicates that the master branch does not exist.
 2. First, ensure you have committed your changes by running:
    ```
    git commit -m ""initial commit""
@@ -831,7 +831,7 @@ If this is your first time to use Github, you will find a great & straightforwar
 You can also use the “upload file” functionality from GitHub for that
 If you write your code on Google colab you can also directly share it on your Github.
 (By Pranab Sarma)",98cff602,Where can I find a beginner-friendly tutorial on using GitHub for uploading code?,machine-learning-zoomcamp
-140,"If you encounter a singular matrix error while trying to invert a matrix during exercises, it is important to remember that not every matrix can be inverted. This error often occurs due to issues with matrix multiplication, particularly because multiplication is not commutative. Therefore, ensure that you respect the order of multiplication when using the method `.dot`. 
+140,"If you encounter a singular matrix error while trying to invert a matrix during exercises, it is important to remember that not every matrix can be inverted. This error often occurs due to issues with matrix multiplication, particularly because multiplication is not commutative. Therefore, ensure that you respect the order of multiplication when using the method `.dot`.
 
 Additionally, if you have previously computed the inverse of a matrix and attempt to do it again in your code, you may also encounter this error. You will learn more about this in the Regularization video, as encountering a singular matrix error is a common experience while working through the exercises.","I'm trying to invert the matrix but I got error that the matrix is singular matrix
 The singular matrix error is caused by the fact that not every matrix can be inverted. In particular, in the homework it happens because you have to pay close attention when dealing with multiplication (the method .dot) since multiplication is not commutative! X.dot(Y) is not necessarily equal to Y.dot(X), so respect the order otherwise you get the wrong matrix.",54ec0de4,What should I do if I encounter a singular matrix error while trying to invert it during our exercises?,machine-learning-zoomcamp
@@ -932,7 +932,7 @@ df = pd.read_csv(r'C:\Users\username\Downloads\data.csv')
 
 1. Type the command: `git config -l | grep url`
 2. The output should show your remote URL in this format: `remote.origin.url=https://github.com/github-username/github-repository-name.git`
-3. Change it to the following format and ensure the change is reflected by re-running the command from step 1:  
+3. Change it to the following format and ensure the change is reflected by re-running the command from step 1:
    `git remote set-url origin ""https://github-username@github.com/github-username/github-repository-name.git""`","Type the following command:
 git config -l | grep url
 The output should look like this:
@@ -1093,7 +1093,7 @@ Solution:
 In your Kaggle notebook settings, turn on the Internet for your session. It's on the settings panel, on the right hand side of the Kaggle screen. You'll be asked to verify your phone number so Kaggle knows you are not a bot.",fc2e0a61,Where can I find the option to turn on internet settings in my Kaggle notebook?,machine-learning-zoomcamp
 170,"To set up a development environment using VS Code, you can start by watching the video ""Creating Virtual Environment for Python from VS Code."" Additionally, VS Code supports native Jupyter Notebooks, allowing you to code in a Notebook without a web browser. If you enable port forwarding and run a 'jupyter notebook' command from a remote machine with a configured connection in .ssh/config, you can execute remote Jupyter Notebook files from your local machine.
 
-Moreover, if you're using GitHub, VS Code provides user-friendly Git support for staging and commits. You can find more information on this in the [Git support documentation](https://code.visualstudio.com/docs/sourcecontrol/overview). 
+Moreover, if you're using GitHub, VS Code provides user-friendly Git support for staging and commits. You can find more information on this in the [Git support documentation](https://code.visualstudio.com/docs/sourcecontrol/overview).
 
 If you're on Windows 11 and want to use WSL, you can set up a WSL development environment by following the guide from Microsoft and using the ""WSL"" extension in VS Code to connect to your WSL Ubuntu instance.","I found this video quite helpful: Creating Virtual Environment for Python from VS Code
 [Native Jupiter Notebooks support in VS Code] In VS Code you can also have a native Jupiter Notebooks support, i.e. you do not need to open a web browser to code in a Notebook. If you have port forwarding enabled + run a ‘jupyter notebook ‘ command from a remote machine + have a remote connection configured in .ssh/config (as Alexey’s video suggests) - VS Code can execute remote Jupyter Notebooks files on a remote server from your local machine: https://code.visualstudio.com/docs/datascience/jupyter-notebooks.
@@ -1330,7 +1330,7 @@ Added by Gregory Morris",ff4da2b6,What method can I use to choose columns based 
 
 ```python
 df.select_dtypes(include=np.number).columns.tolist()
-``` 
+```
 
 This will give you a list of the names of the numeric columns.","What if there were hundreds of columns? How do you get the columns only with numeric or object data in a more concise way?
 df.select_dtypes(include=np.number).columns.tolist()
@@ -1533,7 +1533,7 @@ Added by George Chizhmak",b8ca1cd3,What should I do if I encounter an ImportErro
 231,"To resolve the error that prevents you from launching a notebook in a new environment, specifically the error ""ImportError: cannot import name 'contextfilter' from 'jinja2'"", you should switch to the main environment and run the command `pip install nbconvert --upgrade`.","If you face an error kind of ImportError: cannot import name 'contextfilter' from 'jinja2' (anaconda\lib\site-packages\jinja2\__init__.py) when launching a new notebook for a brand new environment.
 Switch to the main environment and run ""pip install nbconvert --upgrade"".
 Added by George Chizhmak",b8ca1cd3,How can I resolve the error that prevents me from launching a notebook in a new environment?,machine-learning-zoomcamp
-232,"Yes, there are specific commands you need to run depending on the import error message you receive. 
+232,"Yes, there are specific commands you need to run depending on the import error message you receive.
 
 1. If you encounter the error ""No module named ‘ping’"", you should use the command:
    ```python
@@ -1560,11 +1560,11 @@ pip install nbconvert --upgrade
 ```","If you face an error kind of ImportError: cannot import name 'contextfilter' from 'jinja2' (anaconda\lib\site-packages\jinja2\__init__.py) when launching a new notebook for a brand new environment.
 Switch to the main environment and run ""pip install nbconvert --upgrade"".
 Added by George Chizhmak",b8ca1cd3,What steps should I take to fix issues with Jupyter notebook launch related to Jinja2?,machine-learning-zoomcamp
-234,"To overcome a notebook launching error related to an `ImportError` from `jinja2`, you should switch to the main environment and run the following command to upgrade nbconvert: 
+234,"To overcome a notebook launching error related to an `ImportError` from `jinja2`, you should switch to the main environment and run the following command to upgrade nbconvert:
 
 ```
 pip install nbconvert --upgrade
-``` 
+```
 
 This should resolve the error and allow you to launch your Jupyter notebook successfully.","If you face an error kind of ImportError: cannot import name 'contextfilter' from 'jinja2' (anaconda\lib\site-packages\jinja2\__init__.py) when launching a new notebook for a brand new environment.
 Switch to the main environment and run ""pip install nbconvert --upgrade"".
@@ -1647,7 +1647,7 @@ Added by David Espejo",355348f0,Is there an alternative method to download files
 
    Here, `curl` is the command to retrieve data from the internet, `-o` tells curl to save the output as a file, `./housing.csv` is the filename you chose for the downloaded file, and the URL is the location of the file you want to download.
 
-3. After executing the command, curl will extract the data from the specified URL and save it under the name you provided. 
+3. After executing the command, curl will extract the data from the specified URL and save it under the name you provided.
 
 For more detailed information, you can refer to the Curl Documentation.","Wget doesn't ship with macOS, so there are other alternatives to use.
 No worries, we got curl:
@@ -1711,7 +1711,7 @@ Also there is pandas.Series. round idf you need to round values in the whole Ser
 Please check the documentation
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.round.html#pandas.Series.round
 Added by Olga Rudakova",67afabf5,How do I round a specific number to four decimal places in Python?,machine-learning-zoomcamp
-247,"You can use f-strings to format a number with three decimal places like this: 
+247,"You can use f-strings to format a number with three decimal places like this:
 
 ```python
 print(f'Average mark for the Homework is {avg:.3f}')
