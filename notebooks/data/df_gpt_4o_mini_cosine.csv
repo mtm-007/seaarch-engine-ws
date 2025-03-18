@@ -201,7 +201,7 @@ Yes. You are required to provide the URL to your repo in order to receive a grad
 2. Click “All channels” at the top of your left sidebar. If you don’t see this option, click “More” to find it.
 3. Browse the list of public channels or use the search bar to search by channel name or description.
 4. Select the channel you want from the list to view it.
-5. Click “Join Channel” to become a member. 
+5. Click “Join Channel” to become a member.
 
 For more detailed guidance, you can visit this link: https://slack.com/help/articles/205239967-Join-a-channel.","Here’s how you join a in Slack: https://slack.com/help/articles/205239967-Join-a-channel
 Click “All channels” at the top of your left sidebar. If you don't see this option, click “More” to find it.
@@ -407,7 +407,7 @@ You can also use this website directly by entering your email: http://www.sha1-o
    from hashlib import sha1
    def compute_hash(email):
        return sha1(email.lower().encode('utf-8')).hexdigest()
-   
+
    # Example usage
    email = ""YOUR_EMAIL_HERE""
    hashed_email = compute_hash(email)
@@ -577,7 +577,7 @@ On any Python-enabled device or platform, you can use the urllib.request.urlretr
 import urllib.request
 url = ""https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv""
 urllib.request.urlretrieve(url, ""housing.csv"")
-``` 
+```
 
 This will download the file from the specified URL and save it as ""housing.csv"" in your local directory.","If you get “wget is not recognized as an internal or external command”, you need to install it.
 On Ubuntu, run
@@ -701,7 +701,7 @@ To download the data too. The exclamation mark !, lets you execute shell command
 For instance, if you then want to move your data into a data directory alongside your notebook-containing directory, you could execute the following:
 !mkdir -p ../data/
 !mv housing.csv ../data/",d44de7d1,What does the exclamation mark (!) do in a Jupyter notebook?,machine-learning-zoomcamp,0.22093704
-"To execute shell commands like `ls`, `cp`, and `mkdir` in a Jupyter notebook, you can use the `!` operator followed by the command you want to run. 
+"To execute shell commands like `ls`, `cp`, and `mkdir` in a Jupyter notebook, you can use the `!` operator followed by the command you want to run.
 
 For example:
 - To list files in a directory, use: `!ls` (on Unix systems) or `!dir` (on Windows systems).
@@ -756,7 +756,7 @@ Make sure your system supports virtualization in the BIOS settings as well.",(Ty
 
 1. Make sure you have WSL set up on your Windows 11 device. You can refer to the Microsoft Learn link for guidance: Set up a WSL development environment | Microsoft Learn.
 
-2. Download and install the Microsoft verified VS Code extension called 'WSL'. This extension allows you to remotely connect to your WSL Ubuntu instance as if it were a virtual machine. 
+2. Download and install the Microsoft verified VS Code extension called 'WSL'. This extension allows you to remotely connect to your WSL Ubuntu instance as if it were a virtual machine.
 
 Following these steps will enable you to use VS Code seamlessly with your WSL Ubuntu environment.",(Tyler Simpson),314ebe32,How do I connect my WSL Ubuntu instance to VS Code on Windows 11?,machine-learning-zoomcamp,-0.12063644
 "To connect VS Code to WSL, you should download the Microsoft verified VS Code extension ‘WSL’. This will allow you to remotely connect to your WSL Ubuntu instance.",(Tyler Simpson),314ebe32,Which extension should I download to connect VS Code to WSL?,machine-learning-zoomcamp,-0.067982376
@@ -896,7 +896,7 @@ doesn’t work. Any of 3.8/ 3.9 / 3.10 should be all fine
 If you’re on Windows and just installed Anaconda, you can use Anaconda’s own terminal called “Anaconda Prompt”.
 If you don’t have Anaconda or Miniconda, you should install it first
 (Tatyana Mardvilko)",f81f4ecb,Does the specified Python version for the course need to be exactly 3.9?,machine-learning-zoomcamp,0.20878752
-"To read a dataset with Pandas in Windows, you may encounter issues if you use backslashes in the file path. In Python, the backslash (`\`) is treated as an escape character, which can cause conflicts. To avoid this, you should add an ""r"" before the file path so that Python treats it as a literal string instead. 
+"To read a dataset with Pandas in Windows, you may encounter issues if you use backslashes in the file path. In Python, the backslash (`\`) is treated as an escape character, which can cause conflicts. To avoid this, you should add an ""r"" before the file path so that Python treats it as a literal string instead.
 
 Here’s how you should load the file:
 
@@ -1265,7 +1265,7 @@ df.info()
 
 ```python
 df.info()
-``` 
+```
 
 This will print the information about the dataset, including the index datatype and the number of entries.","Answer:
 It prints the information about the dataset like:
@@ -1308,7 +1308,7 @@ It's also advisable to import the pandas library if you are using it, with the f
 
 ```python
 import pandas as pd
-``` 
+```
 
 Make sure these import statements are included before any other code that uses 'np' or 'pd'.","Pandas and numpy libraries are not being imported
 NameError: name 'np' is not defined
@@ -1326,7 +1326,7 @@ If you are also using numpy, you should import it as well:
 
 ```python
 import numpy as np
-``` 
+```
 
 This ensures that both libraries are properly imported and available for use in your code.","Pandas and numpy libraries are not being imported
 NameError: name 'np' is not defined
@@ -1490,7 +1490,7 @@ Multiple Linear Regression in Matrix Form
 Pseudoinverse Solution to OLS
 Added by Sylvia Schmitt
 with commends from Dmytro Durach",183a1c90,What additional reading is recommended for understanding ordinary least squares?,machine-learning-zoomcamp,0.65266275
-"You can find more resources about multiple linear regression in matrix form in the additional reading and videos section of the course material. Here are some specific resources mentioned: 
+"You can find more resources about multiple linear regression in matrix form in the additional reading and videos section of the course material. Here are some specific resources mentioned:
 
 - Ordinary least squares
 - Multiple Linear Regression in Matrix Form
@@ -1547,7 +1547,7 @@ The information about multiplication operators was provided by Andrii Larkin.,"N
 numpy.dot() or ndarray.dot() can be used, but for matrix-matrix multiplication @ or np.matmul() is preferred (as per numpy doc).
 If multiplying by a scalar numpy.multiply() or * is preferred.
 Added by Andrii Larkin",735e6c78,Who provided the information about multiplication operators?,machine-learning-zoomcamp,0.45610833
-"If you encounter an ImportError related to Jinja2 when launching a new Jupyter notebook in a new environment, you should switch to the main environment and run the following command: 
+"If you encounter an ImportError related to Jinja2 when launching a new Jupyter notebook in a new environment, you should switch to the main environment and run the following command:
 
 ```
 pip install nbconvert --upgrade
@@ -1615,7 +1615,7 @@ In this command:
 - `curl` is a utility for retrieving information from the internet.
 - `-o` tells curl to store the result as a file.
 - `./housing.csv` is the name you choose for the downloaded file.
-- The URL provided is the location of the file you want to download. 
+- The URL provided is the location of the file you want to download.
 
 This command will extract data from the specified URL and save it as `housing.csv` in your current directory.","Wget doesn't ship with macOS, so there are other alternatives to use.
 No worries, we got curl:
@@ -1641,7 +1641,7 @@ Links: Put the web address (URL) here, and cURL will extract data from it and sa
 More about it at:
 Curl Documentation
 Added by David Espejo",355348f0,What does the -o option do in the curl command?,machine-learning-zoomcamp,0.6465547
-"To specify the name of the file when using curl on macOS, you can use the `-o` option followed by the desired filename. For example, the command would look like this: 
+"To specify the name of the file when using curl on macOS, you can use the `-o` option followed by the desired filename. For example, the command would look like this:
 
 ```bash
 curl -o ./housing.csv https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
@@ -1917,7 +1917,7 @@ skewness = df['median_house_value'].skew()
 # Print the skewness value
 print(""Skewness of 'median_house_value':"", skewness)
 (Mohammad Emad Sharifi)",bbc0fca3,Why is checking the distribution or skewness important in machine learning for regression?,machine-learning-zoomcamp,0.32234818
-"You might encounter a LinAlgError: Singular matrix error while following course videos due to a few reasons. Firstly, it can happen because not every matrix can be inverted, which is one of the main causes of a singular matrix error. Specifically, in the course, it often occurs when dealing with matrix multiplication, as the order in which matrices are multiplied is crucial. Make sure to respect the order of multiplication, as X.dot(Y) is not necessarily equal to Y.dot(X). 
+"You might encounter a LinAlgError: Singular matrix error while following course videos due to a few reasons. Firstly, it can happen because not every matrix can be inverted, which is one of the main causes of a singular matrix error. Specifically, in the course, it often occurs when dealing with matrix multiplication, as the order in which matrices are multiplied is crucial. Make sure to respect the order of multiplication, as X.dot(Y) is not necessarily equal to Y.dot(X).
 
 Additionally, if you have performed the inverse of X once in your code and attempt to do it again, that could also trigger the error. It's a normal part of the learning process, and the reason for this error will be further explained in the Regularization video.","It’s possible that when you follow the videos, you’ll get a Singular Matrix error. We will explain why it happens in the Regularization video. Don’t worry, it’s normal that you have it.
 You can also have an error because you did the inverse of X once in your code and you’re doing it a second time.
@@ -2035,7 +2035,7 @@ response = requests.get(url)
 if response.status_code == 200:
     with open('housing.csv', 'wb') as file:
         file.write(response.content)
-        
+
 df = pd.read_csv('housing.csv')
 ```
 
@@ -2083,7 +2083,7 @@ Harish Balasundaram",8fe56032,Is there a specific symbol I need to use before th
 2. Once the dataset is loaded, read it using the pandas library:
    ```python
    df = pd.read_csv('housing.csv')
-   ``` 
+   ```
 
 Make sure to include the `!` before `wget` when using the command in the notebook.","For users of kaggle notebooks, the dataset can be loaded through widget using the below command. Please remember that ! before wget is essential
 !wget https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
@@ -2273,7 +2273,7 @@ You’re still referencing the original variable, this is called a shallow copy.
 X_train = df_train.copy()
 X_val = df_val.copy()
 Added by Ixchel García",0bc4c3da,Why do I still see a null column after applying .fillna()?,machine-learning-zoomcamp,0.6751603
-"To ensure that your dataframe copy does not reference the original variable, you can create a deep copy of the dataframe by using the following code: 
+"To ensure that your dataframe copy does not reference the original variable, you can create a deep copy of the dataframe by using the following code:
 
 ```python
 X_copy = X.copy()
@@ -2297,7 +2297,7 @@ You’re still referencing the original variable, this is called a shallow copy.
 X_train = df_train.copy()
 X_val = df_val.copy()
 Added by Ixchel García",0bc4c3da,What is the difference between a shallow copy and a deep copy in pandas?,machine-learning-zoomcamp,0.69088864
-"To create a deep copy of a dataframe in pandas, you should use the following method: 
+"To create a deep copy of a dataframe in pandas, you should use the following method:
 
 ```python
 X_copy = X.copy()
@@ -2533,7 +2533,7 @@ df_train['column_name'].mean( )
 Another option:
 df_train[‘column_name’].describe()
 (Bhaskar Sarma)",f488ce85,"When calculating the mean in HW02, question 3, should validation or test data sets be used?",machine-learning-zoomcamp,0.7516535
-"To compute the mean for the training data set as per HW02, question 3, you should use only the training data set. You can calculate the mean using the following code: 
+"To compute the mean for the training data set as per HW02, question 3, you should use only the training data set. You can calculate the mean using the following code:
 
 ```python
 df_train['column_name'].mean()
@@ -2780,7 +2780,7 @@ y_train = np.concatenate((y_train, y_val), axis=0)
 
 ```python
 y_train = np.concatenate((y_train, y_val), axis=0)
-``` 
+```
 
 You can find more information in the numpy documentation: [numpy.concatenate](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html).","Use ‘pandas.concat’ function (https://pandas.pydata.org/docs/reference/api/pandas.concat.html) to combine two dataframes. To combine two numpy arrays use numpy.concatenate (https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html) function. So the code would be as follows:
 df_train_combined = pd.concat([df_train, df_val])
@@ -3016,7 +3016,7 @@ Evaluation Matrix: https://docs.google.com/spreadsheets/d/e/2PACX-1vQCwqAtkjl07M
 GitHub for theory: https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp
 Youtube Link: 3.X --- https://www.youtube.com/watch?v=0Zw04wdeTQo&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=29
 ~~Nukta Bhatia~~",b8cca8b7,Where can I find the theory GitHub repository?,machine-learning-zoomcamp,0.12074223
-"The error message ""could not convert string to float: 'Nissan'"" indicates that a machine learning model or function is expecting numerical input but is receiving a string instead. In this case, the model is trying to convert the car brand 'Nissan' into a numerical value, which cannot be done. 
+"The error message ""could not convert string to float: 'Nissan'"" indicates that a machine learning model or function is expecting numerical input but is receiving a string instead. In this case, the model is trying to convert the car brand 'Nissan' into a numerical value, which cannot be done.
 
 To resolve this issue, you need to encode the categorical variable (in this case, car brands) into numerical values. One common method to accomplish this is one-hot encoding, which creates new binary columns for each unique category in the original data. For example, using pandas, you can apply one-hot encoding as follows:
 
@@ -3034,7 +3034,7 @@ import pandas as pd
 data_encoded = pd.get_dummies(data, columns=['brand'])
 In this code, pd.get_dummies() creates a new DataFrame where the ‘brand’ column is replaced with binary columns for each brand (e.g., ‘brand_Nissan’, ‘brand_Toyota’, etc.). Each row in the DataFrame has a 1 in the column that corresponds to its brand and 0 in all other brand columns.
 -Mohammad Emad Sharifi-",1091b10f,What does the error 'could not convert string to float: Nissan' mean?,machine-learning-zoomcamp,0.9681829
-"To fix the error related to converting a string to float in your dataset, you need to encode the categorical variables (like car brands) into numerical values. The error typically occurs when a model expects numerical input but receives a string instead, such as the brand 'Nissan'. 
+"To fix the error related to converting a string to float in your dataset, you need to encode the categorical variables (like car brands) into numerical values. The error typically occurs when a model expects numerical input but receives a string instead, such as the brand 'Nissan'.
 
 A common way to resolve this is by using one-hot encoding, which creates binary columns for each unique value in the categorical column. Here’s an example using pandas:
 
@@ -3119,7 +3119,7 @@ Pastor Soto",d2043cf5,Why don't we include df_train_full for the correlation mat
 The dataset that includes the validation data is df_train_full.,"Q2 asks about correlation matrix and converting median_house_value from numeric to binary. Just to make sure here we are only dealing with df_train not df_train_full, right? As the question explicitly mentions the train dataset.
 Yes. I think it is only on df_train. The reason behind this is that df_train_full also contains the validation dataset, so at this stage we don't want to make conclusions based on the validation data, since we want to test how we did without using that portion of the data.
 Pastor Soto",d2043cf5,"Which dataset includes the validation data, df_train or df_train_full?",machine-learning-zoomcamp,0.49251807
-"You can color the background of a pandas.DataFrame based on its numerical values by using the method `pandas.io.formats.style.Styler.background_gradient()`. You need to ensure that your DataFrame contains only numerical values before applying the coloring. 
+"You can color the background of a pandas.DataFrame based on its numerical values by using the method `pandas.io.formats.style.Styler.background_gradient()`. You need to ensure that your DataFrame contains only numerical values before applying the coloring.
 
 Here’s an example of how to do this:
 
@@ -3519,7 +3519,7 @@ Dmytro Durach
 "The recommended method to prevent convergence issues in Ridge regression during Week 3 includes the following steps:
 
 1. **Feature Normalization**: Normalize your numerical features using techniques like MinMaxScaler or StandardScaler to ensure that numerical features are on a similar scale.
-   
+
 2. **Categorical Feature Encoding**: If your dataset includes categorical features, apply categorical encoding techniques such as OneHotEncoder (OHE) to convert them into a numerical format.
 
 3. **Combine Features**: After normalizing numerical features and encoding categorical features, combine them to form a single feature matrix (X_train) for training the Ridge regression model.
@@ -3695,11 +3695,11 @@ The main practical advantage of using pandas get_dummies over sklearn OneHotEnco
 "The results from pandas `get_dummies` and sklearn `OneHotEncoder` are essentially identical, as both techniques one-hot encode categorical variables. However, there are key differences related to their input/output types and the way they handle missing values. `get_dummies` is more convenient when working with Pandas DataFrames, while `OneHotEncoder` is more suitable for use in a scikit-learn-based machine learning pipeline.","They are basically the same. There are some key differences with regards to their input/output types, handling of missing values, etc, but they are both techniques to one-hot-encode categorical variables with identical results. The biggest difference is get_dummies are a convenient choice when you are working with Pandas Dataframes, while if you are building a scikit-learn-based machine learning pipeline and need to handle categorical data as part of that pipeline, OneHotEncoder is a more suitable choice. [Abhirup Ghosh]",94a3b2fb,Are the results identical when using pandas get_dummies and sklearn OneHotEncoder?,machine-learning-zoomcamp,0.8932168
 "The key differences between the input/output types of pandas `get_dummies` and sklearn's `OneHotEncoder` are as follows:
 
-1. **Input Type**: 
+1. **Input Type**:
    - `pandas.get_dummies` is designed to work with Pandas DataFrames directly.
    - `sklearn.OneHotEncoder` requires an array as input.
 
-2. **Output Type**: 
+2. **Output Type**:
    - The output of `pandas.get_dummies` is generally a DataFrame.
    - `OneHotEncoder` produces an output in array format.
 
@@ -3997,7 +3997,7 @@ from sklearn.metrics import mean_squared_error
 rms = mean_squared_error(y_actual, y_predicted, squared=False)
 See details: https://stackoverflow.com/questions/17197492/is-there-a-library-function-for-root-mean-square-error-rmse-in-python
 Ahmed Okka",dc1897b5,How do I modify the mean_squared_error function to return RMSE instead of MSE?,machine-learning-zoomcamp,0.8386008
-"You can find more details about using the `mean_squared_error` function for RMSE in Python in the following way: 
+"You can find more details about using the `mean_squared_error` function for RMSE in Python in the following way:
 
 To use RMSE without any math or numpy, you can set the `squared` parameter to `False` in the `mean_squared_error` function from `sklearn.metrics`. Here’s how you can do it:
 
@@ -4048,7 +4048,7 @@ use the following corrected import and code line:
 ```python
 from sklearn import metrics
 metrics.accuracy_score(y_train, y_pred >= 0.5)
-``` 
+```
 
 This should resolve the TypeError you're encountering.","I got this error multiple times here is the code:
 “accuracy_score(y_val, y_pred >= 0.5)”
@@ -4061,7 +4061,7 @@ OMAR Wael",821dfc08,How can I fix the TypeError when using accuracy_score in skl
 
 ```python
 from sklearn.metrics import accuracy_score
-``` 
+```
 
 Alternatively, you can import the entire `metrics` module like this:
 
@@ -4258,17 +4258,17 @@ Added by Rileen Sinha",b431e7eb,"Which tools or libraries can be used to verify 
 "You can find methods to obtain precision, recall, and F1-score using scikit-learn by using the following functions:
 
 1. **For individual metrics**:
-   - Precision: 
+   - Precision:
      ```python
      from sklearn.metrics import precision_score
      precision = precision_score(y_true, y_pred, average='binary')
      ```
-   - Recall: 
+   - Recall:
      ```python
      from sklearn.metrics import recall_score
      recall = recall_score(y_true, y_pred, average='binary')
      ```
-   - F1-Score: 
+   - F1-Score:
      ```python
      from sklearn.metrics import f1_score
      f1 = f1_score(y_true, y_pred, average='binary')
@@ -4347,9 +4347,9 @@ You should check the solutions from the 2021 iteration of the course for using A
 "To evaluate numerical variables using AUC, you can utilize the `roc_auc_score` function from the `sklearn.metrics` module. You should pass the vector of the target variable as the first argument and the vector of feature values as the second argument. This will return the AUC score for the feature you provided. Each numerical value can be treated as a score, where you pass it as `y_score`, and the corresponding target variable will be passed as `y_true` each time you calculate the AUC.",Check the solutions from the 2021 iteration of the course. You should use roc_auc_score.,b4b85c4b,How do I evaluate numerical variables using AUC?,machine-learning-zoomcamp,0.45358783
 "The recommended metric for evaluating feature importance in numerical variables is the AUC score, which can be calculated using the `roc_auc_score` function from the `sklearn.metrics` module. You should pass the vector of the target variable as the first argument and the vector of feature values as the second argument.",Check the solutions from the 2021 iteration of the course. You should use roc_auc_score.,b4b85c4b,What metric is recommended for feature importance in numerical variables?,machine-learning-zoomcamp,0.3126317
 You should use the `roc_auc_score` function for AUC evaluation in this course.,Check the solutions from the 2021 iteration of the course. You should use roc_auc_score.,b4b85c4b,What function should I use for AUC evaluation in this course?,machine-learning-zoomcamp,0.7764943
-"To compute AUC using numerical values, you need to use the `roc_auc_score` function from the `sklearn.metrics` module. The function requires two parameters: `y_true`, which is the vector of the target variable, and `y_score`, which consists of the numerical values you want to evaluate as scores. 
+"To compute AUC using numerical values, you need to use the `roc_auc_score` function from the `sklearn.metrics` module. The function requires two parameters: `y_true`, which is the vector of the target variable, and `y_score`, which consists of the numerical values you want to evaluate as scores.
 
-For each numerical value in your dataset, you would pass it as `y_score`, and ensure that the corresponding true values are passed as `y_true`. The function will then calculate and return the AUC score based on these inputs. 
+For each numerical value in your dataset, you would pass it as `y_score`, and ensure that the corresponding true values are passed as `y_true`. The function will then calculate and return the AUC score based on these inputs.
 
 For example, if you have a dataframe and you want to compute AUC for a numerical column against the target variable, you would use:
 
@@ -4446,7 +4446,7 @@ Asia Saeed",8eca9f73,"What causes the error 'multi_class must be in ('ovo', 'ovr
 "To avoid errors when using `roc_auc_score`, you should ensure that you pass the parameters in the correct order. The first parameter should be `y_true` (the actual values), and the second parameter should be `y_score` (the predicted scores or feature values). For example, you would use it as `roc_auc_score(y_train, df_train[col])` where `y_train` is the true target variable and `df_train[col]` is the feature for which you're calculating the AUC.","I’m getting “ValueError: multi_class must be in ('ovo', 'ovr')” when using roc_auc_score to evaluate feature importance of numerical variables in question 1.
 I was getting this error because I was passing the parameters to roc_auc_score incorrectly (df_train[col] , y_train) . The correct way is to pass the parameters in this way: roc_auc_score(y_train, df_train[col])
 Asia Saeed",8eca9f73,Can you explain the correct parameter order for roc_auc_score to avoid errors?,machine-learning-zoomcamp,0.6824117
-"The proper syntax for using `roc_auc_score` with `y_train` and `df_train` is: 
+"The proper syntax for using `roc_auc_score` with `y_train` and `df_train` is:
 
 ```python
 roc_auc_score(y_train, df_train[col])
@@ -4473,7 +4473,7 @@ Krishna Anand",7b9eb7f7,Which library provides a terminal progress bar?,machine-
 The information about monitoring wait times was provided by Krishna Anand.,"from tqdm.auto import tqdm
 Tqdm - terminal progress bar
 Krishna Anand",7b9eb7f7,Who provided the information about monitoring wait times?,machine-learning-zoomcamp,0.23251447
-"The command to import tqdm for auto progress monitoring is: 
+"The command to import tqdm for auto progress monitoring is:
 
 ```python
 from tqdm.auto import tqdm
@@ -4631,7 +4631,7 @@ Nonetheless, it might be useful for you to rewatch the video, or even watch vide
 "To improve your understanding of the ROC curve, you might find it helpful to:
 
 1. **Rewatch the related video**: This can provide further clarity on the concept.
-2. **Explore additional resources**: Look for videos, lectures, or notes from other instructors on the topic, as the ROC AUC is a crucial metric in binary classification models. 
+2. **Explore additional resources**: Look for videos, lectures, or notes from other instructors on the topic, as the ROC AUC is a crucial metric in binary classification models.
 
 Remember that it's a complex topic, and taking the time to revisit materials can aid in your comprehension.","It's a complex and abstract topic and it requires some time to understand. You can move on without fully understanding the concept.
 Nonetheless, it might be useful for you to rewatch the video, or even watch videos/lectures/notes by other people on this topic, as the ROC AUC is one of the most important metrics used in Binary Classification models.",41521c92,What are some ways I can improve my understanding of the ROC curve?,machine-learning-zoomcamp,0.75010467
@@ -4667,7 +4667,7 @@ df_full_train, df_test = train_test_split(df, test_size=0.2, random_state=42)
 df_train, df_val = train_test_split(df_full_train, test_size=0.25, random_state=42)
 Therefore, I would recommend using the second method which is more consistent with the lessons and thus the homeworks.
 Ibraheem Taha",25481ce5,"How should data be split into train, validation, and test sets?",machine-learning-zoomcamp,0.60736287
-"The recommended data splitting method is to first split the data into train and a temporary dataset, and then split the temporary dataset into validation and test sets. Specifically, this can be done using the following approach: 
+"The recommended data splitting method is to first split the data into train and a temporary dataset, and then split the temporary dataset into validation and test sets. Specifically, this can be done using the following approach:
 
 1) Split the data into training and a temporary set (e.g., 60% train, 40% temp).
 2) Then split the temporary set into validation and test datasets (e.g., 20% validation, 20% test from the temporary set).
@@ -4802,7 +4802,7 @@ idx = np.argwhere(
 print(
     f""The precision and recall curves intersect at a threshold equal to {df_scores.loc[idx]['threshold']}.""
 )
-``` 
+```
 
 This will identify the index at which the sign of the difference between precision and recall changes, allowing you to find and print the corresponding threshold value.","You can find the intercept between these two curves using numpy diff (https://numpy.org/doc/stable/reference/generated/numpy.diff.html ) and sign (https://numpy.org/doc/stable/reference/generated/numpy.sign.html):
 I suppose here that you have your df_scores ready with your three columns ‘threshold’, ‘precision’ and ‘recall’:
@@ -4968,7 +4968,7 @@ print(f'Precision: {precision}')
 print(f'Recall: {recall}')
 print(f'F1-Score: {f1}')
 print(f'ROC AUC: {roc_auc}')
-``` 
+```
 
 Additionally, you can obtain all classification metrics simultaneously using the `classification_report` function from scikit-learn.","Model evaluation metrics can be easily computed using off the shelf calculations available in scikit learn library. This saves a lot of time and more precise compared to our own calculations from the scratch using numpy and pandas libraries.
 from sklearn.metrics import (accuracy_score,
@@ -5110,7 +5110,7 @@ precision, recall, fscore, support = precision_recall_fscore_support(y_val, y_va
 ```python
 from sklearn.metrics import precision_recall_fscore_support
 precision, recall, fscore, support = precision_recall_fscore_support(y_val, y_val_pred, zero_division=0)
-``` 
+```
 
 This function provides a straightforward way to obtain key performance indicators for classification tasks.","Scikit-learn offers another way: precision_recall_fscore_support
 Example:
@@ -5515,11 +5515,11 @@ For Python 3,
 Open your command prompt or terminal and run the following command:
 pip install --upgrade python
 Aminat Abolade",957280d8,Which terminal command do I use to verify my current Python version?,machine-learning-zoomcamp,0.73453814
-"To ensure the 'Virtual Machine Platform' feature is activated on Windows, follow these steps: 
+"To ensure the 'Virtual Machine Platform' feature is activated on Windows, follow these steps:
 
 1. Search for ""features"" in the Windows search bar.
 2. In the ""Windows Features"" window, check if the 'Virtual Machine Platform' checkbox is selected.
-3. Make sure your system's BIOS is capable of virtualization, which is usually the default setting. 
+3. Make sure your system's BIOS is capable of virtualization, which is usually the default setting.
 
 If these conditions are met, the 'Virtual Machine Platform' should be activated.","It is quite simple, and you can follow these instructions here:
 https://www.youtube.com/watch?v=qYlgUDKKK5A&ab_channel=NeuralNine
@@ -5743,9 +5743,9 @@ print(waitress.__version__)
 ```","Import waitress
 print(waitress.__version__)
 Krishna Anand",7156679d,What code should I run in Jupyter to see the version of an installed Python package?,machine-learning-zoomcamp,0.4644412
-"If you encounter the error 'Cannot connect to the docker daemon' when trying to run hello-world, first ensure that the Docker daemon is running. 
+"If you encounter the error 'Cannot connect to the docker daemon' when trying to run hello-world, first ensure that the Docker daemon is running.
 
-If you are using WSL, you may need to reinstall Docker: remove the Docker installation from WSL and install Docker Desktop on your host machine (Windows). 
+If you are using WSL, you may need to reinstall Docker: remove the Docker installation from WSL and install Docker Desktop on your host machine (Windows).
 
 For Linux users, you can start the Docker daemon with one of the following commands:
 - `sudo dockerd`
@@ -5984,7 +5984,7 @@ Alternatively, you can use:
 
 ```bash
 docker images --format ""{{.Size}}"" <image name>
-``` 
+```
 
 Replace `<image name>` with the name of the Docker image you want to query.","Using the command docker images or docker image ls will dump all information for all local Docker images. It is possible to dump the information only for a specified image by using:
 docker image ls <image name>
@@ -6113,7 +6113,7 @@ Eg: C:\Users\Ella\.virtualenvs\code-qsdUdabf (for module-05 lesson)
 The environment name is the name of the last folder in the folder directory where we used the pipenv install command (or any other pipenv command). E.g. If you run any pipenv command in folder path ~/home/user/Churn-Flask-app, it will create an environment named Churn-Flask-app-some_random_characters, and it's path will be like this: /home/user/.local/share/virtualenvs/churn-flask-app-i_mzGMjX.
 All libraries of this environment will be installed inside this folder. To activate this environment, I will need to cd into the project folder again, and type pipenv shell. In short, the location of the project folder acts as an identifier for an environment, in place of any name.
 (Memoona Tahira)",5c67e086,Does the project folder's name impact the environment's name?,machine-learning-zoomcamp,0.7149113
-"All libraries of a pipenv environment are installed inside the folder created for the environment. The specific location for the environment depends on the operating system: 
+"All libraries of a pipenv environment are installed inside the folder created for the environment. The specific location for the environment depends on the operating system:
 
 - For OSX/Linux, they are installed in `~/.local/share/virtualenvs/folder-name_cyrptic-hash`
 - For Windows, they are installed in `C:\Users\<USERNAME>\.virtualenvs\folder-name_cyrptic-hash`
@@ -6301,7 +6301,7 @@ Krishna Anand",45f39b76,How do I handle a failure in writing dependencies to Pip
 "If the dependencies aren't recorded in the Pipfile during deployment, you should take the following steps:
 
 1. Create a virtual environment using the command line.
-2. Use the `pip freeze` command to write the requirements to a text file. 
+2. Use the `pip freeze` command to write the requirements to a text file.
 
 This will help ensure that the necessary dependencies are documented correctly.","Create a virtual environment using the Cmd command (command) and use pip freeze command to write the requirements in the text file
 Krishna Anand",45f39b76,What steps should I take if the dependencies aren't recorded in Pipfile during deployment?,machine-learning-zoomcamp,0.58574474
@@ -6324,7 +6324,7 @@ The second error as noticed by Sriniketh, your are missing one parenthesis it sh
 The first error showed up because your f-string is using () instead of {} around C. So, should be: f’model_C={C}.bin’
 The second error as noticed by Sriniketh, your are missing one parenthesis it should be pickle.dump((dv, model), f_out)
 (Humberto R.)",94e17563,Why is there an f-string error in my code when deploying machine learning models?,machine-learning-zoomcamp,0.77339387
-"To correct the f-string error involving `model_C` in your deployment process, you need to ensure that you are using `{}` instead of `()` around `C` in your f-string. It should be formatted as follows: 
+"To correct the f-string error involving `model_C` in your deployment process, you need to ensure that you are using `{}` instead of `()` around `C` in your f-string. It should be formatted as follows:
 
 ```python
 f'model_C={C}.bin'
@@ -6334,7 +6334,7 @@ Additionally, make sure you have the correct syntax with the necessary parenthes
 
 ```python
 pickle.dump((dv, model), f_out)
-``` 
+```
 
 With these corrections, the f-string and function call should work properly.","f-String not properly keyed in: does anyone knows why i am getting error after import pickle?
 The first error showed up because your f-string is using () instead of {} around C. So, should be: f’model_C={C}.bin’
@@ -6672,7 +6672,7 @@ I rebuilt the Docker image, and ran it once again; this time it worked correctly
    docker run --rm <image-name>
    ```
 
-4. **Troubleshooting**: If you encounter issues starting the container, ensure you are using the correct model and Python version as specified in your configuration files. 
+4. **Troubleshooting**: If you encounter issues starting the container, ensure you are using the correct model and Python version as specified in your configuration files.
 
 By following these guidelines, you should be able to successfully rebuild and run your Docker image.","Solution
 This error was because there was another instance of gunicorn running. So I thought of removing this along with the zoomcamp_test image. However, it didn’t let me remove the orphan container. So I did the following
@@ -7017,7 +7017,7 @@ After removing it, you should rebuild the lock via:
 
 ```
 pipenv lock
-``` 
+```
 
 before retrying the docker build command.","If during running the  docker build command, you get an error like this:
 Your Pipfile.lock (221d14) is out of date. Expected: (939fe0).
@@ -7027,7 +7027,7 @@ Option 1: Delete the pipfile.lock via rm Pipfile, and then rebuild the lock via 
 Option 2:  If it still doesn’t work, remove the pipenv environment, Pipfile and Pipfile.lock, and create a new one before building docker again. Commands to remove pipenv environment and removing pipfiles:
 pipenv  --rm
 rm Pipfile*",a23b276a,What command can be used to remove the existing Pipfile.lock before retrying the docker build command?,machine-learning-zoomcamp,0.8145603
-"If simply deleting the Pipfile.lock does not resolve the issue, you should take the following additional steps: 
+"If simply deleting the Pipfile.lock does not resolve the issue, you should take the following additional steps:
 
 1. Remove the entire pipenv environment using the command `pipenv --rm`.
 2. Delete the Pipfile and Pipfile.lock by running `rm Pipfile*`.
@@ -7098,7 +7098,7 @@ Added by Edidiong Esu",1d6d5b51,Could being in a different region cause my AWS e
 
 2. You may see a warning in the notebook stating that the script 'waitress-serve.exe' is installed in a directory that is not on PATH. Make note of this directory (for example: 'c:\Users\....\anaconda3\Scripts').
 
-3. To add the path where 'waitress-serve.exe' is installed to Git Bash's PATH, enter the following command in Git Bash: 
+3. To add the path where 'waitress-serve.exe' is installed to Git Bash's PATH, enter the following command in Git Bash:
    ```
    nano ~/.bashrc
    ```
@@ -7294,7 +7294,7 @@ For example, to test a local prediction endpoint, you can use:
 echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict
 ```
 
-These commands can be used on WSL2 in Windows, as well as on Linux and macOS.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+These commands can be used on WSL2 in Windows, as well as on Linux and macOS.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -7320,7 +7320,7 @@ This method works on WSL2 for Windows as well as on Linux and MacOS. Alternative
 
 ```bash
 cat <json file path> | curl --json @- <url>
-```","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+```","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -7336,7 +7336,7 @@ Added by Sylvia Schmitt",dfb41f7e,What is a simple way to check if HTTP POST req
 curl --json '<json data>' <url>
 ```
 
-Additionally, you can pipe JSON data from a file or echo command into curl.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+Additionally, you can pipe JSON data from a file or echo command into curl.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -7361,9 +7361,9 @@ Added by Sylvia Schmitt",dfb41f7e,"Can I use curl on WSL2, Linux, and MacOS to t
 3. Here's an example using the echo command:
    ```
    echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict
-   ``` 
+   ```
 
-These commands allow you to quickly test your HTTP POST requests from the command line.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+These commands allow you to quickly test your HTTP POST requests from the command line.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -7379,7 +7379,7 @@ Added by Sylvia Schmitt",dfb41f7e,How do you pipe JSON data to curl for testing 
 echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict
 ```
 
-This command sends a POST request to the specified URL with the provided JSON data.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+This command sends a POST request to the specified URL with the provided JSON data.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -7557,7 +7557,7 @@ COPY [""src/predict.py"", ""models/xgb_model.bin"", ""./""]											Gopakumar 
 
 ```Dockerfile
 COPY [""src/predict.py"", ""models/xgb_model.bin"", ""./""]
-``` 
+```
 
 Make sure to use double quotes around the filenames.","You can copy files from your local machine into a Docker container using the docker cp command. Here's how to do it:
 In the Dockerfile, you can provide the folder containing the files that you want to copy over. The basic syntax is as follows:
@@ -7580,7 +7580,7 @@ COPY [""src/predict.py"", ""models/xgb_model.bin"", ""./""]
 This command copies the files `predict.py` and `xgb_model.bin` from the specified source locations into the current working directory of the Docker container. Make sure to use double quotes around the filenames to avoid errors.","You can copy files from your local machine into a Docker container using the docker cp command. Here's how to do it:
 In the Dockerfile, you can provide the folder containing the files that you want to copy over. The basic syntax is as follows:
 COPY [""src/predict.py"", ""models/xgb_model.bin"", ""./""]											Gopakumar Gopinathan",a24a874a,Can you show an example of using the COPY command in Dockerfile?,machine-learning-zoomcamp,0.82448924
-"You can't create the environment on AWS Elastic Beanstalk with the given command possibly because the command you initially used did not specify a compatible Docker platform. The command you tried, `eb init -p docker tumor-diagnosis-serving -r eu-west-1`, resulted in an error when running `eb local run --port 9696`, stating ""ERROR: NotSupportedError - You can use 'eb local' only with preconfigured, generic and multicontainer Docker platforms."" 
+"You can't create the environment on AWS Elastic Beanstalk with the given command possibly because the command you initially used did not specify a compatible Docker platform. The command you tried, `eb init -p docker tumor-diagnosis-serving -r eu-west-1`, resulted in an error when running `eb local run --port 9696`, stating ""ERROR: NotSupportedError - You can use 'eb local' only with preconfigured, generic and multicontainer Docker platforms.""
 
 To resolve this, you should use a command that specifies a compatible Docker platform, such as `eb init -p ""Docker running on 64bit Amazon Linux 2"" tumor-diagnosis-serving -r eu-west-1`. This allows proper recognition of the Dockerfile and successful building/running of the Docker container.","I struggled with the command :
 eb init -p docker tumor-diagnosis-serving -r eu-west-1
@@ -7602,7 +7602,7 @@ Added by Mélanie Fouesnard",bf563b1f,What kind of error occurs when running 'eb
 
 1. Re-initialize your Elastic Beanstalk application by running the command `eb init -i` and then choose the Docker platform options from the list. The first default option for the Docker platform should be suitable.
 
-2. Alternatively, you can edit the file ‘.elasticbeanstalk/config.yml’ directly. Change the line that specifies `default_platform` from Docker to `default_platform: Docker running on 64bit Amazon Linux 2023`. 
+2. Alternatively, you can edit the file ‘.elasticbeanstalk/config.yml’ directly. Change the line that specifies `default_platform` from Docker to `default_platform: Docker running on 64bit Amazon Linux 2023`.
 
 Note that the second approach may not have the same options available in the future.","I struggled with the command :
 eb init -p docker tumor-diagnosis-serving -r eu-west-1
@@ -7614,7 +7614,7 @@ This allowed the recognition of the Dockerfile and the build/run of the docker c
 Added by Mélanie Fouesnard",bf563b1f,How can I fix the error when using 'eb local run' on AWS Elastic Beanstalk?,machine-learning-zoomcamp,0.6757831
 "Instead of using the command `eb init -p docker tumor-diagnosis-serving -r eu-west-1`, you should use:
 
-`eb init -p ""Docker running on 64bit Amazon Linux 2"" tumor-diagnosis-serving -r eu-west-1` 
+`eb init -p ""Docker running on 64bit Amazon Linux 2"" tumor-diagnosis-serving -r eu-west-1`
 
 This change allows the recognition of the Dockerfile and the build/run of the docker container.","I struggled with the command :
 eb init -p docker tumor-diagnosis-serving -r eu-west-1
@@ -7648,7 +7648,7 @@ Added by Mélanie Fouesnard",21e9facf,How can I fix the deployment failure in AW
 ERROR   Instance deployment: Both 'Dockerfile' and 'Dockerrun.aws.json' are missing in your source bundle. Include at least one of them. The deployment failed.
 I did not committed the files used to build the container, particularly the Dockerfile. After a git add and git commit of the modified files, the command works.
 Added by Mélanie Fouesnard",21e9facf,What files might cause an error if they are missing when I deploy to AWS ElasticBean?,machine-learning-zoomcamp,0.7385482
-"To resolve the instance deployment error for missing Docker files in AWS Elastic Beanstalk, you need to ensure that at least one of the required files, either 'Dockerfile' or 'Dockerrun.aws.json', is included in your source bundle. 
+"To resolve the instance deployment error for missing Docker files in AWS Elastic Beanstalk, you need to ensure that at least one of the required files, either 'Dockerfile' or 'Dockerrun.aws.json', is included in your source bundle.
 
 If you encounter the error ""Both 'Dockerfile' and 'Dockerrun.aws.json' are missing in your source bundle,"" it likely means that you did not commit the Dockerfile or the necessary files used to build the container. To fix this, run `git add` and `git commit` to include the modified files. After committing the necessary files, you should be able to run the command successfully.","I had this error when creating a AWS ElasticBean environment: eb create tumor-diagnosis-env
 ERROR   Instance deployment: Both 'Dockerfile' and 'Dockerrun.aws.json' are missing in your source bundle. Include at least one of them. The deployment failed.
@@ -7798,7 +7798,7 @@ for f in dv.feature_names_:
 string = f.replace(“=<”, “-le”)
 features.append(string)
 Peter Ernicke",b61d2e92,What special characters in feature names might cause the ValueError during DMatrix creation?,machine-learning-zoomcamp,0.73384523
-"Peter Ernicke's method for fixing the ValueError involves replacing the sequence ""=<"" with ""-le"" in each feature name while iterating through the feature names. Specifically, he creates a new list by appending each modified feature name. 
+"Peter Ernicke's method for fixing the ValueError involves replacing the sequence ""=<"" with ""-le"" in each feature name while iterating through the feature names. Specifically, he creates a new list by appending each modified feature name.
 
 In contrast, Asia Saeed's solution first removes ""=<"" and does not consider the equal sign ""="" as problematic in her case. Her method involves replacing just ""=<"" with ""_"" in the feature names using a single line of list comprehension.
 
@@ -7846,7 +7846,7 @@ features = dv.feature_names_
 pattern = r'[\[\]<>]'
 features = [re.sub(pattern, '  ', f) for f in features]
 Added by Andrii Larkin",c920eef3,What should I do if I encounter a TypeError while setting xgb.DMatrix(feature_names=)?,machine-learning-zoomcamp,0.8110584
-"To fix a ValueError related to feature names when using XGBoost, you should ensure that your list of feature names does not contain unsupported characters such as ""["", ""]"", or ""<"". 
+"To fix a ValueError related to feature names when using XGBoost, you should ensure that your list of feature names does not contain unsupported characters such as ""["", ""]"", or ""<"".
 
 You can replace these problematic characters with underscores by using the following code:
 
@@ -8049,11 +8049,11 @@ ETA is the learning rate of the model. XGBoost uses gradient descent to calculat
 ETA is the learning rate of the model. XGBoost uses gradient descent to calculate and update the model. In gradient descent, we are looking for the minimum weights that help the model to learn the data very well. This minimum weights for the features is updated each time the model passes through the features and learns the features during training. Tuning the learning rate helps you tell the model what speed it would use in deriving the minimum for the weights.",6ffe101d,Why is eta important for learning in XGBoost?,machine-learning-zoomcamp,0.8764912
 "Adjusting eta, which is the learning rate in XGBoost, influences gradient descent by determining the speed at which the model approaches the minimum weights during training. A higher learning rate might lead to faster convergence but could risk overshooting the minimum, while a lower learning rate allows for more precise updates to the weights but may result in longer training times. Tuning eta helps in optimizing the balance between these effects to improve the model's learning efficiency.","Sometimes someone might wonder what eta means in the tunable hyperparameters of XGBoost and how it helps the model.
 ETA is the learning rate of the model. XGBoost uses gradient descent to calculate and update the model. In gradient descent, we are looking for the minimum weights that help the model to learn the data very well. This minimum weights for the features is updated each time the model passes through the features and learns the features during training. Tuning the learning rate helps you tell the model what speed it would use in deriving the minimum for the weights.",6ffe101d,How does adjusting eta influence gradient descent in XGBoost?,machine-learning-zoomcamp,0.80316615
-"Bagging and boosting are two techniques used in ensemble algorithms. 
+"Bagging and boosting are two techniques used in ensemble algorithms.
 
 Bagging, which stands for ""Bootstrap Aggregation,"" involves creating multiple training datasets from the original dataset by sampling with replacement (bootstrapping). Each model is trained on these different datasets in parallel, and their predictions are combined (aggregated) to produce the final output. For example, in Random Forest, the output can be the average of the predictions. Bagging helps to decrease variance and is robust against overfitting.
 
-Boosting, on the other hand, is a sequential process where each model is trained based on the errors of the previous model. In this method, misclassified observations are assigned higher weights, which helps subsequent models to focus on correcting the errors made by prior models. XGBoost is an example of a boosting algorithm. Boosting reduces bias and generally provides higher accuracy than bagging, but it can be more prone to overfitting. 
+Boosting, on the other hand, is a sequential process where each model is trained based on the errors of the previous model. In this method, misclassified observations are assigned higher weights, which helps subsequent models to focus on correcting the errors made by prior models. XGBoost is an example of a boosting algorithm. Boosting reduces bias and generally provides higher accuracy than bagging, but it can be more prone to overfitting.
 
 Overall, while bagging focuses on reducing variance by averaging multiple models trained in parallel, boosting aims to improve model accuracy by sequentially adjusting weights based on errors from previous models.","For ensemble algorithms, during the week 6, one bagging algorithm and one boosting algorithm were presented: Random Forest and XGBoost, respectively.
 Random Forest trains several models in parallel. The output can be, for example, the average value of all the outputs of each model. This is called bagging.
@@ -8249,11 +8249,11 @@ Added by Sylvia Schmitt",eac70ce3,Can you provide a code example to capture stdo
 Solution to this issue is to make sure that you pass y_actuals as 1st argument and y_pred as 2nd argument.
 roc_auc_score(y_train, y_pred)
 Hareesh Tummala",5f91f8ca,What causes the ValueError: continuous format is not supported when calling roc_auc_score()?,machine-learning-zoomcamp,0.7912302
-"To fix the continuous format error when using `roc_auc_score()`, make sure to pass the arguments in the correct order. You should provide `y_actuals` as the first argument and `y_pred` as the second argument. For example, use the following format: 
+"To fix the continuous format error when using `roc_auc_score()`, make sure to pass the arguments in the correct order. You should provide `y_actuals` as the first argument and `y_pred` as the second argument. For example, use the following format:
 
 ```python
 roc_auc_score(y_train, y_pred)
-``` 
+```
 
 This should resolve the error you are encountering.","Calling roc_auc_score() to get auc is throwing the above error.
 Solution to this issue is to make sure that you pass y_actuals as 1st argument and y_pred as 2nd argument.
@@ -8415,7 +8415,7 @@ Bhaskar Sarma",ddc14ada,Who provided the solution for setting a random seed in a
 
 ```python
 from [file name] import ping
-``` 
+```
 
 Make sure to replace `[file name]` with the appropriate module or file name that contains the ping function.","When I tried to run example from the video using function ping and can not import it. I use import ping and it was unsuccessful. To fix it I use the statement:
 
@@ -8425,7 +8425,7 @@ Olga Rudakova",6cb56405,What should I do if I cannot import the ping function in
 
 ```python
 from [file name] import ping
-``` 
+```
 
 This is the solution provided by Olga Rudakova. Make sure to replace `[file name]` with the appropriate file name where the `ping` function is defined.","When I tried to run example from the video using function ping and can not import it. I use import ping and it was unsuccessful. To fix it I use the statement:
 
@@ -8451,7 +8451,7 @@ Olga Rudakova",6cb56405,What is the correct way to import the ping function used
 
 ```python
 from [file name] import ping
-``` 
+```
 
 Replace `[file name]` with the actual name of the file where the ping function is defined.","When I tried to run example from the video using function ping and can not import it. I use import ping and it was unsuccessful. To fix it I use the statement:
 
@@ -8687,7 +8687,7 @@ Ahmed Okka",a7e7cdd2,Is there a way to calculate RMSE without manually computing
 ```python
 from sklearn.metrics import mean_squared_error
 rms = mean_squared_error(y_actual, y_predicted, squared=False)
-``` 
+```
 
 This directly returns the RMSE without needing to take the square root separately.","Instead of using np.sqrt() as the second step. You can extract it using like this way :
 mean_squared_error(y_val, y_predict_val,squared=False)
@@ -8756,12 +8756,12 @@ George Chizhmak",6a245a05,What does the expanded error message for XGBoostError 
 "The solution for the XGBoostError was provided by George Chizhmak, who noted that installing sklearn resolved the issue.","Expanded error says: xgboost.core.XGBoostError: sklearn needs to be installed in order to use this module. So, sklearn in requirements solved the problem.
 George Chizhmak",6a245a05,Who provided the solution for the XGBoostError?,machine-learning-zoomcamp,0.81931466
 "If you have questions, you can always ask them during office hours or in Slack. Additionally, if you miss a session, everything is recorded, so you won't miss any content. You can also submit questions for office hours in advance, and these will be addressed during the live stream.","Information gain  in Y due to X, or the mutual information of Y and X
-Where  is the entropy of Y. 
+Where  is the entropy of Y.
 
 If X is completely uninformative about Y:
 If X is completely informative about Y: )
 Hrithik Kumar Advani",4405bfca,questions,machine-learning-zoomcamp,-0.0015729866
-"What if I miss a session? 
+"What if I miss a session?
 
 Everything is recorded, so you won’t miss anything. You will be able to ask your questions for office hours in advance and we will cover them during the live stream. Also, you can always ask questions in Slack.",Filling in missing values using an entire dataset before splitting for training/testing/validation causes,3e0acc25,questions,machine-learning-zoomcamp,0.11906509
 "To save an Xgboost model, you should call the method `booster.save_model`.","Save model by calling ‘booster.save_model’, see eg
@@ -8799,7 +8799,7 @@ Click on the Three dots at the top right hand side
 Click on Accelerator
 Choose T4 GPU
 Khurram Majeed",95a16746,How do I create a notebook in Kaggle for Deep Learning?,machine-learning-zoomcamp,0.82448024
-"You can find the Accelerator option in Kaggle by following these steps: 
+"You can find the Accelerator option in Kaggle by following these steps:
 
 1. Create or import your notebook into Kaggle.
 2. Click on the three dots at the top right-hand side of the notebook.
@@ -8829,7 +8829,7 @@ Click on the Three dots at the top right hand side
 Click on Accelerator
 Choose T4 GPU
 Khurram Majeed",95a16746,What is the process to enable GPU for my Kaggle notebook?,machine-learning-zoomcamp,0.8910403
-"To create or import a notebook into Google Colab for deep learning, follow these steps: 
+"To create or import a notebook into Google Colab for deep learning, follow these steps:
 
 1. Create or import your notebook into Google Colab.
 2. Click on the drop-down at the top right-hand side of the interface.
@@ -8877,7 +8877,7 @@ Khurram Majeed",46acdd18,What steps are involved in setting up Google Colab for 
    - In the Git SSH keys section, copy the default public key provided by Saturn Cloud.
    - Paste this key into the SSH keys section of your GitHub repository.
 
-4. **Test Authentication**: Open a terminal on Saturn Cloud and run the command `ssh -T git@github.com`. If everything is set up correctly, you will receive a successful authentication notice. 
+4. **Test Authentication**: Open a terminal on Saturn Cloud and run the command `ssh -T git@github.com`. If everything is set up correctly, you will receive a successful authentication notice.
 
 By following these steps, you can connect your GPU on Saturn Cloud to a GitHub repository.","Connecting your GPU on Saturn Cloud to Github repository is not compulsory, since you can just download the notebook and copy it to the Github folder. But if you like technology to do things for you, then follow the solution description below:
 Solution description: Follow the instructions in these github docs to create an SSH private and public key:
@@ -9004,7 +9004,7 @@ This template has been moved to “python deep learning tutorials’ which is sh
 Steven Christolis",69cd4897,Who provided the information about the new location of the Python TensorFlow template?,machine-learning-zoomcamp,0.4921674
 "To resolve the ""module scipy not found"" error in the Saturn Cloud TensorFlow image, you can either:
 
-1. Install the module in a new cell by running the command: 
+1. Install the module in a new cell by running the command:
    ```python
    !pip install scipy
    ```
@@ -9133,7 +9133,7 @@ Pastor Soto",551461b2,Where do I get the Kaggle API token?,machine-learning-zoom
 1. After you create the kaggle.json file from your Kaggle account, open your notebook in Saturn Cloud.
 2. Click on the folder icon in the upper left corner to go to the root folder.
 3. Click on the .kaggle folder.
-4. Once inside the .kaggle folder, upload the kaggle.json file that you downloaded. 
+4. Once inside the .kaggle folder, upload the kaggle.json file that you downloaded.
 
 After uploading, don't forget to run `!chmod 600 /home/jovyan/.kaggle/kaggle.json` in your notebook.","Problem description: Uploading the data to saturn cloud from kaggle can be time saving, specially if the dataset is large.
 You can just download to your local machine and then upload to a folder on saturn cloud, but there is a better solution that needs to be set once and you have access to all kaggle datasets in saturn cloud.
@@ -9186,9 +9186,9 @@ Pastor Soto",551461b2,What command is used to change permissions for the kaggle.
 "To set up CUDA and cuDNN on Ubuntu 22.04, you can follow this simplified guide:
 
 1. **Install Nvidia drivers**: Download and install the Nvidia drivers from the [official Nvidia website](https://www.nvidia.com/download/index.aspx).
-2. **Install the CUDA toolkit**: 
+2. **Install the CUDA toolkit**:
    - Download and install the CUDA toolkit version 11.x.x from the [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive).
-3. **Install cuDNN**: 
+3. **Install cuDNN**:
    - Download and install cuDNN from the [cuDNN download page](https://developer.nvidia.com/rdp/cudnn-download).
 4. **Set up TensorFlow with CUDA support**: Follow the instructions to install TensorFlow with GPU support by referring to the [TensorFlow installation guide for Linux](https://www.tensorflow.org/install/pip#linux_1).
 
@@ -9329,7 +9329,7 @@ Added by Gregory Morris",34b0ebfc,How can I solve the 'Host key verification fai
 
 ```bash
 git clone https://github.com/alexeygrigorev/clothing-dataset-small.git
-``` 
+```
 
 This method will work even if you do not have your SSH key configured.","Problem description:
 Getting an error using <git clone git@github.com:alexeygrigorev/clothing-dataset-small.git>
@@ -9554,7 +9554,7 @@ local_zip = 'data.zip'
 zip_ref = zipfile.ZipFile(local_zip, 'r')
 zip_ref.extractall('data')
 zip_ref.close()
-``` 
+```
 
 Both methods will allow you to unzip the files without displaying the output of each unzipped file.","Problem:
 A dataset for homework is in a zipped folder. If you unzip it within a jupyter notebook by means of ! unzip command, you’ll see a huge amount of output messages about unzipping of each image. So you need to suppress this output
@@ -9876,7 +9876,7 @@ Added by Sylvia Schmitt",2023a9dc,Where can I find more information on using 'wo
    tf.config.experimental.enable_op_determinism()
    ```
 
-This will ensure that your script produces the same results when executed multiple times. For detailed guidance, you can refer to the TensorFlow documentation: https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism.","Reproducibility for training runs can be achieved following these instructions: 
+This will ensure that your script produces the same results when executed multiple times. For detailed guidance, you can refer to the TensorFlow documentation: https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism.","Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
@@ -9896,21 +9896,21 @@ Added by Sylvia Schmitt",468f69ff,How can I achieve reproducibility for training
    tf.config.experimental.enable_op_determinism()
    ```
 
-These steps should be executed in your script, and they will help maintain reproducibility if the script is run multiple times. For more detailed instructions, refer to the official TensorFlow documentation here: https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism.","Reproducibility for training runs can be achieved following these instructions: 
+These steps should be executed in your script, and they will help maintain reproducibility if the script is run multiple times. For more detailed instructions, refer to the official TensorFlow documentation here: https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism.","Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
 tf.config.experimental.enable_op_determinism()
 This will work for a script, if this gets executed multiple times.
 Added by Sylvia Schmitt",468f69ff,What steps should I follow to ensure my TensorFlow model runs are reproducible?,machine-learning-zoomcamp,0.8624818
-"The role of the seed value for reproducibility in TensorFlow is to ensure consistent results across different training runs. By setting a specific seed value, such as `seed = 1234`, and using the command `tf.keras.utils.set_random_seed(seed)`, TensorFlow can generate the same random numbers each time the code is executed. This allows the user to replicate the behavior of the training process reliably, as long as additional steps, like `tf.config.experimental.enable_op_determinism()`, are followed.","Reproducibility for training runs can be achieved following these instructions: 
+"The role of the seed value for reproducibility in TensorFlow is to ensure consistent results across different training runs. By setting a specific seed value, such as `seed = 1234`, and using the command `tf.keras.utils.set_random_seed(seed)`, TensorFlow can generate the same random numbers each time the code is executed. This allows the user to replicate the behavior of the training process reliably, as long as additional steps, like `tf.config.experimental.enable_op_determinism()`, are followed.","Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
 tf.config.experimental.enable_op_determinism()
 This will work for a script, if this gets executed multiple times.
 Added by Sylvia Schmitt",468f69ff,What is the role of the seed value for reproducibility in TensorFlow?,machine-learning-zoomcamp,0.72595286
-The instructions for achieving reproducibility in TensorFlow were added by Sylvia Schmitt.,"Reproducibility for training runs can be achieved following these instructions: 
+The instructions for achieving reproducibility in TensorFlow were added by Sylvia Schmitt.,"Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
@@ -9925,7 +9925,7 @@ tf.keras.utils.set_random_seed(seed)
 tf.config.experimental.enable_op_determinism()
 ```
 
-This ensures reproducibility for training runs if executed multiple times.","Reproducibility for training runs can be achieved following these instructions: 
+This ensures reproducibility for training runs if executed multiple times.","Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
@@ -10071,7 +10071,7 @@ Added by Sylvia Schmitt",a5f6f439,Which Python package is similar to 'htop' for 
 https://pypi.org/project//
 Image source: https://pypi.org/project//
 Added by Sylvia Schmitt",a5f6f439,What is the purpose of checking GPU and CPU utilization in deep learning tasks?,machine-learning-zoomcamp,0.5182409
-"The parameter count for a Conv2d layer is determined by the formula: \((\text{kernel width} \times \text{kernel height} \times \text{number of input channels} + 1) \times \text{number of filters}\). For example, if you define a Conv2D layer with a 3x3 kernel, 3 input channels (like an RGB image), and 32 filters, the calculation would be: 
+"The parameter count for a Conv2d layer is determined by the formula: \((\text{kernel width} \times \text{kernel height} \times \text{number of input channels} + 1) \times \text{number of filters}\). For example, if you define a Conv2D layer with a 3x3 kernel, 3 input channels (like an RGB image), and 32 filters, the calculation would be:
 
 \((3 \times 3 \times 3 + 1) \times 32\), which results in 896 parameters. The ""+1"" accounts for the bias term for each filter.","Let’s say we define our Conv2d layer like this:
 >> tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(150, 150, 3))
@@ -10151,7 +10151,7 @@ So where do 6272 vectors come from? It’s computed like this:
 6272
 # 7x7 “image shape” after several convolutions and poolings, 128 filters
 Added by Andrii Larkin",879c1ec0,How is the output shape of a Conv2d layer derived as shown in model.summary()?,machine-learning-zoomcamp,0.7288364
-"The Conv2d layer with 32 filters has 896 parameters because the calculation for the number of parameters is based on the formula: \((3 \times 3 \times 3 + 1) \times 32\). Here, \(3 \times 3\) represents the size of the kernel, \(3\) represents the number of input channels (for the RGB image), and \(+ 1\) accounts for the bias term associated with each filter. Subsequently, multiplying this by the \(32\) filters yields the total number of parameters: 
+"The Conv2d layer with 32 filters has 896 parameters because the calculation for the number of parameters is based on the formula: \((3 \times 3 \times 3 + 1) \times 32\). Here, \(3 \times 3\) represents the size of the kernel, \(3\) represents the number of input channels (for the RGB image), and \(+ 1\) accounts for the bias term associated with each filter. Subsequently, multiplying this by the \(32\) filters yields the total number of parameters:
 
 \[
 (3 \times 3 \times 3 + 1) \times 32 = 896
@@ -10181,8 +10181,8 @@ So where do 6272 vectors come from? It’s computed like this:
 Added by Andrii Larkin",879c1ec0,Why does the Conv2d layer with 32 filters have 896 parameters?,machine-learning-zoomcamp,0.744869
 "To calculate the number of features after the Flatten layer, you multiply the output dimensions of the previous layer. For example, if the output shape before the Flatten layer is (7, 7, 128), you calculate the number of features as follows:
 
-\[ 
-7 \times 7 \times 128 = 6272 
+\[
+7 \times 7 \times 128 = 6272
 \]
 
 So, after the Flatten layer, you will have 6272 features.","Let’s say we define our Conv2d layer like this:
@@ -10357,7 +10357,7 @@ except:
 # Invalid device or cannot modify virtual devices once initialized.
 pass
 ```",0315aa96,How can I address OOM errors in TensorFlow if I am not using a CPU?,machine-learning-zoomcamp,0.83372325
-"You can find detailed documentation on handling memory growth in TensorFlow with an Nvidia GPU at this link: [TensorFlow Memory Growth Documentation](https://www.tensorflow.org/api_docs/python/tf/config/experimental/set_memory_growth). 
+"You can find detailed documentation on handling memory growth in TensorFlow with an Nvidia GPU at this link: [TensorFlow Memory Growth Documentation](https://www.tensorflow.org/api_docs/python/tf/config/experimental/set_memory_growth).
 
 Additionally, you can also use the following code snippet to set memory growth:
 
@@ -10544,7 +10544,7 @@ Could simplify the login process with, just replace the <ACCOUNT_NUMBER> and <RE
 export PASSWORD=`aws ecr get-login-password`
 docker login -u AWS -p $PASSWORD <ACCOUNT_NUMBER>.dkr.ecr.<REGION>.amazonaws.com/clothing-tflite-images
 Added by Martin Uribe",53f3ee10,What is the updated command to fetch the password from aws-cli when the original returns an invalid choice error?,machine-learning-zoomcamp,0.8992219
-"To avoid syntax errors instead of using `aws ecr get-login --no-include-email`, you should use the command: 
+"To avoid syntax errors instead of using `aws ecr get-login --no-include-email`, you should use the command:
 
 ```bash
 aws ecr get-login-password
@@ -10555,7 +10555,7 @@ You can simplify the login process with this command:
 ```bash
 export PASSWORD=`aws ecr get-login-password`
 docker login -u AWS -p $PASSWORD <ACCOUNT_NUMBER>.dkr.ecr.<REGION>.amazonaws.com/clothing-tflite-images
-``` 
+```
 
 Make sure to replace `<ACCOUNT_NUMBER>` and `<REGION>` with your actual values.","The command aws ecr get-login --no-include-email returns an invalid choice error:
 The solution is to use the following command instead:  aws ecr get-login-password
@@ -10629,7 +10629,7 @@ Or if all else fails, first run the following command: DOCKER_BUILDKIT=0  docker
 
 1. Update your Docker Desktop if you haven’t done so.
 2. Restart Docker Desktop and your terminal, and then attempt to build the image again.
-3. If the issue persists, run the following command first: 
+3. If the issue persists, run the following command first:
    ```bash
    DOCKER_BUILDKIT=0 docker build .
    ```
@@ -10639,7 +10639,7 @@ Update your docker desktop if you haven’t done so.
 Or restart docker desktop and terminal and then build the image all over again.
 Or if all else fails, first run the following command: DOCKER_BUILDKIT=0  docker build .  then build your image.
 (optional) Added by Odimegwu David",0edeb016,How can I solve the ERROR [internal] load metadata for public.ecr.aws/lambda/python:3.8 by updating software?,machine-learning-zoomcamp,0.76764
-"If restarting Docker Desktop and terminal fails to fix the metadata loading error, you should run the following command: 
+"If restarting Docker Desktop and terminal fails to fix the metadata loading error, you should run the following command:
 
 ```
 DOCKER_BUILDKIT=0 docker build .
@@ -10764,7 +10764,7 @@ Andrei Ilin",7fd648ca,Why might I receive the message 'Using default tag: latest
 
 3. **Python and Path Issues**: If Python is not installed or not added to the system PATH, Docker might fail to run certain commands that depend on it.
 
-4. **Windows Version**: An outdated Windows version can also lead to problems, as Docker may not function properly without the latest updates. 
+4. **Windows Version**: An outdated Windows version can also lead to problems, as Docker may not function properly without the latest updates.
 
 Make sure to check for these issues if Docker stops responding on your machine.","Problem description:
 In command line try to do $ docker build -t dino_dragon
@@ -10792,24 +10792,24 @@ Pastor Soto",42c09143,How can I solve the pip version error while running docker
 The most common source of this error in this week is because Alex video shows a version of the wheel with python 8, we need to find a wheel with the version that we are working on. In this case python 9. Another common error is to copy the link, this will also produce the same error, we need to download the raw format:
 https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp39-cp39-linux_x86_64.whl
 Pastor Soto",42c09143,What might be the cause of the pip version error in this week's serverless deep learning section?,machine-learning-zoomcamp,0.30940434
-"Copying the wheel link produces an error during the docker build because you need to download the raw format of the wheel file rather than copying the link directly. This means you should use a direct link to access the raw file, such as: 
+"Copying the wheel link produces an error during the docker build because you need to download the raw format of the wheel file rather than copying the link directly. This means you should use a direct link to access the raw file, such as:
 
 ```
 https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp39-cp39-linux_x86_64.whl
-``` 
+```
 
 Failing to do this can lead to the same docker build error related to the wheel version compatibility.","When running docker build -t dino-dragon-model it returns the above error
 The most common source of this error in this week is because Alex video shows a version of the wheel with python 8, we need to find a wheel with the version that we are working on. In this case python 9. Another common error is to copy the link, this will also produce the same error, we need to download the raw format:
 https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp39-cp39-linux_x86_64.whl
 Pastor Soto",42c09143,Why does copying the wheel link produce an error during docker build?,machine-learning-zoomcamp,0.7817463
-"To avoid the pip version error in this week's assignments, you should use a wheel compatible with Python 3.9. The specific wheel to download is:  
+"To avoid the pip version error in this week's assignments, you should use a wheel compatible with Python 3.9. The specific wheel to download is:
 https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp39-cp39-linux_x86_64.whl","When running docker build -t dino-dragon-model it returns the above error
 The most common source of this error in this week is because Alex video shows a version of the wheel with python 8, we need to find a wheel with the version that we are working on. In this case python 9. Another common error is to copy the link, this will also produce the same error, we need to download the raw format:
 https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp39-cp39-linux_x86_64.whl
 Pastor Soto",42c09143,What version of the wheel should be used to avoid the pip version error in this week's assignments?,machine-learning-zoomcamp,0.6963845
-"To find the correct wheel for Python 9 when working on serverless deep learning, you can download the appropriate wheel from this raw format link: 
+"To find the correct wheel for Python 9 when working on serverless deep learning, you can download the appropriate wheel from this raw format link:
 
-https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp39-cp39-linux_x86_64.whl 
+https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp39-cp39-linux_x86_64.whl
 
 Make sure you are not copying the link directly, but using the raw format to avoid errors.","When running docker build -t dino-dragon-model it returns the above error
 The most common source of this error in this week is because Alex video shows a version of the wheel with python 8, we need to find a wheel with the version that we are working on. In this case python 9. Another common error is to copy the link, this will also produce the same error, we need to download the raw format:
@@ -10854,10 +10854,10 @@ In video 9.6, after installing aswcli, we should configure it with aws configure
 Solution description:
 Yes, in my I case I left everything as the provided defaults (except, obviously, the Access key and the secret access key)
 Added by Bhaskar Sarma",d6d534fc,Who provided the solution for AWS configuration issue in video 9.6?,machine-learning-zoomcamp,0.42812443
-"Your lambda function may pass local tests but fail on a running Docker instance due to the handling of data types in the responses. Specifically, if your model returns individual estimation values as numpy float32, you will encounter serialization issues because these values are not JSON serializable. When running in a Docker instance, you need to convert these numpy float32 values to base-Python floats before returning them. This can be done using `float()` as shown in the example: 
+"Your lambda function may pass local tests but fail on a running Docker instance due to the handling of data types in the responses. Specifically, if your model returns individual estimation values as numpy float32, you will encounter serialization issues because these values are not JSON serializable. When running in a Docker instance, you need to convert these numpy float32 values to base-Python floats before returning them. This can be done using `float()` as shown in the example:
 
 ```python
-preds = [float(interpreter.get_tensor(output_index)[0][0]), 
+preds = [float(interpreter.get_tensor(output_index)[0][0]),
          float(1-interpreter.get_tensor(output_index)[0][0])]
 ```
 
@@ -10877,7 +10877,7 @@ Added by Konrad Muehlberg",b2c0c554,Why does my lambda function pass local tests
 "The 'Object of type float32 is not JSON serializable' error occurs because the model (for example, the dino vs dragon model) returns individual estimation values as numpy float32 values (arrays). These numpy float32 values need to be converted to base-Python floats to make them serializable. For instance, instead of returning numpy float32 values directly, you should convert them using the `float()` function. Here is an example of how to do this in code:
 
 ```python
-preds = [float(interpreter.get_tensor(output_index)[0][0]), 
+preds = [float(interpreter.get_tensor(output_index)[0][0]),
          float(1-interpreter.get_tensor(output_index)[0][0])]
 ```
 
@@ -10899,7 +10899,7 @@ Added by Konrad Muehlberg",b2c0c554,What causes the 'Object of type float32 is n
 Instead of returning numpy float32 values directly, you can modify your prediction code as follows:
 
 ```python
-preds = [float(interpreter.get_tensor(output_index)[0][0]), 
+preds = [float(interpreter.get_tensor(output_index)[0][0]),
          float(1 - interpreter.get_tensor(output_index)[0][0])]
 ```
 
@@ -10919,7 +10919,7 @@ Added by Konrad Muehlberg",b2c0c554,How can I convert numpy float32 values to ma
 "To avoid the JSON serialization issue with the dino vs dragon model, you need to ensure that the model returns individual estimation values as base-Python floats instead of numpy float32 values. Specifically, convert the outputs from numpy float32 to float using the following code:
 
 ```python
-preds = [float(interpreter.get_tensor(output_index)[0][0]), 
+preds = [float(interpreter.get_tensor(output_index)[0][0]),
          float(1-interpreter.get_tensor(output_index)[0][0])]
 ```
 
@@ -10955,7 +10955,7 @@ preds = [float(interpreter.get_tensor(output_index)[0][0]), \
 float(1-interpreter.get_tensor(output_index)[0][0])]
 The rest can be made work by following the chapter 9 (and/or chapter 5!) lecture videos step by step.
 Added by Konrad Muehlberg",b2c0c554,Which chapters and videos should I refer to for resolving lambda function errors in serverless deep learning?,machine-learning-zoomcamp,0.63214934
-"The error when running the command `interpreter.set_tensor(input_index, x)` is caused by a mismatch in data types. You will encounter a ValueError stating that it cannot set the tensor because it got a value of type UINT8 but expected type FLOAT32 for the input. This occurs because the variable `x` is an integer (int), while a float is expected. 
+"The error when running the command `interpreter.set_tensor(input_index, x)` is caused by a mismatch in data types. You will encounter a ValueError stating that it cannot set the tensor because it got a value of type UINT8 but expected type FLOAT32 for the input. This occurs because the variable `x` is an integer (int), while a float is expected.
 
 To resolve this issue, you need to convert `x` to the appropriate type before setting the tensor. Specifically, you can convert it to float32 using the following code:
 ```python
@@ -11179,7 +11179,7 @@ Added by Sumeet Lalla",59a81fd5,Who contributed the information about deploying 
 4. To run the built image, use this command:
    ```
    docker run -it --rm -p 8080:8080 --platform linux/amd64 clothing-model:latest
-   ``` 
+   ```
 
 By following these steps, you should be able to resolve the error when building the Docker image on your M1 Mac.","Problem:
 While trying to build docker image in Section 9.5 with the command:
@@ -11225,7 +11225,7 @@ docker build --platform linux/amd64 -t clothing-model .
 To run the built image, use the command:
 docker run -it --rm -p 8080:8080 --platform linux/amd64 clothing-model:latest
 Added by Daniel Egbo",35dbd6e2,What should I do if the command 'docker build -t clothing-model .' throws a tflite runtime whl error on an M1 Mac?,machine-learning-zoomcamp,0.82698715
-"The alternative link provided for the tflite runtime whl during Docker image building in Section 9.5 is: 
+"The alternative link provided for the tflite runtime whl during Docker image building in Section 9.5 is:
 
 https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.14.0-cp310-cp310-linux_x86_64.whl","Problem:
 While trying to build docker image in Section 9.5 with the command:
@@ -11416,7 +11416,7 @@ Added by Alena Kniazeva, modified by Alex Litvinov",5c043c62,Is there a sample D
 
 1. **Use Python 3.9**: Since tflite_runtime does not work with Python 3.10, installing Python 3.9 may resolve the installation issues.
 
-2. **Check Available Versions**: Look for compatible versions of tflite_runtime for your OS and Python combination at [Google Coral's repository](https://google-coral.github.io/py-repo/tflite-runtime/). 
+2. **Check Available Versions**: Look for compatible versions of tflite_runtime for your OS and Python combination at [Google Coral's repository](https://google-coral.github.io/py-repo/tflite-runtime/).
 
 3. **Alternative Installation Options**: You can explore options from [Alexey Grigorev's GitHub repository](https://github.com/alexeygrigorev/tflite-aws-lambda/tree/main/tflite), where you can find different wheel files to install using pip, e.g.:
    ```bash
@@ -11484,7 +11484,7 @@ Then, you can extract the `layer.tar` from the `<name-of-tar-file.tar>` to view 
 docker image save <image-name> -o <name-of-tar-file.tar>
 The individual layers of the docker image for the filesystem content can be viewed by extracting the layer.tar present in the <name-of-tar-file.tar> created from above.
 Sumeet Lalla",451bc25d,How do I view the contents of a Docker image saved as a tar file?,machine-learning-zoomcamp,0.83932185
-"The file format used when saving a Docker image locally is tar. You can save/export the Docker image to tar format using the command: 
+"The file format used when saving a Docker image locally is tar. You can save/export the Docker image to tar format using the command:
 
 ```
 docker image save <image-name> -o <name-of-tar-file.tar>
@@ -12020,7 +12020,7 @@ This command sends a POST request to the local endpoint created by Docker for yo
 
 ```bash
 docker run -it --rm -p 9000:8080 name
-``` 
+```
 
 This sets up the local endpoint at `localhost:9000`.","This deployment setup can be tested locally using AWS RIE (runtime interface emulator).
 Basically, if your Docker image was built upon base AWS Lambda image (FROM public.ecr.aws/lambda/python:3.10) - just use certain ports for “docker run” and a certain “localhost link” for testing:
@@ -12047,7 +12047,7 @@ Added by Andrii Larkin",0cfbe2e2,Are there any specific curl commands for testin
 You should convert the float32 values returned by your model to base-Python floats. For example, if your function returns `preds` as numpy float32 values, modify your lambda_handler() to convert them like this:
 
 ```python
-preds = [float(interpreter.get_tensor(output_index)[0][0]), 
+preds = [float(interpreter.get_tensor(output_index)[0][0]),
          float(1 - interpreter.get_tensor(output_index)[0][0])]
 ```
 
@@ -12173,7 +12173,7 @@ To overcome this issue, you can download the whl file to your local project fold
 COPY <file-name> .
 RUN pip install <file-name>
 Abhijit Chakraborty",d4f9efdc,What error might I encounter with AWS Lambda API Gateway?,machine-learning-zoomcamp,0.3796207
-"To invoke a method using the boto3 client for Lambda API Gateway, you need to obtain the deployed API URL for the specific path you want to access. For example, the invocation URL will look like this: 
+"To invoke a method using the boto3 client for Lambda API Gateway, you need to obtain the deployed API URL for the specific path you want to access. For example, the invocation URL will look like this:
 
 ```
 https://<random string>.execute-api.us-east-2.amazonaws.com/test/predict
@@ -12384,13 +12384,13 @@ config.gpu_options.allow_growth = True
 session = tf.compat.v1.Session(config=config)
 After doing this most of my issues went away. I say most because there was one instance when I still got the error once more, but only during one epoch. I ran the code again, right after it finished, and I never saw the error again.
 Added by Martin Uribe",a64aed6b,Who added the solution for the Allocator ran out of memory errors in the FAQ record?,machine-learning-zoomcamp,0.5463518
-"When creating the virtual environment in session 10.3 with pipenv and trying to run the script gateway.py, you might encounter the following error: 
+"When creating the virtual environment in session 10.3 with pipenv and trying to run the script gateway.py, you might encounter the following error:
 
 TypeError: Descriptors cannot not be created directly.
 
 This error indicates that if the call originated from a _pb2.py file, your generated code is out of date and needs to be regenerated with protoc version >= 3.19.0. If you cannot regenerate your protos immediately, you can try one of the following workarounds:
 1. Downgrade the protobuf package to version 3.20.x or lower.
-2. Set the environment variable PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION to ""python"" (note that this will use pure-Python parsing and will be significantly slower). 
+2. Set the environment variable PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION to ""python"" (note that this will use pure-Python parsing and will be significantly slower).
 
 This issue arises when you are using one of the newer versions of protobuf.","In session 10.3, when creating the virtual environment with pipenv and trying to run the script gateway.py, you might get this error:
 TypeError: Descriptors cannot not be created directly.
@@ -12439,7 +12439,7 @@ This will happen if your version of protobuf is one of the newer ones. As a work
 pipenv install --python 3.9.13 requests grpcio==1.42.0 flask gunicorn \
 keras-image-helper tensorflow-protobuf==2.7.0 protobuf==3.19.6
 Added by Ángel de Vicente",727238ee,What are the possible workarounds for the issue caused by newer versions of protobuf in session 10.3?,machine-learning-zoomcamp,0.6242658
-"In session 10.3, Ángel de Vicente addressed the protobuf issue by creating a virtual environment with pipenv and installing specific package versions. He used the following command: 
+"In session 10.3, Ángel de Vicente addressed the protobuf issue by creating a virtual environment with pipenv and installing specific package versions. He used the following command:
 
 ```
 pipenv install --python 3.9.13 requests grpcio==1.42.0 flask gunicorn keras-image-helper tensorflow-protobuf==2.7.0 protobuf==3.19.6
@@ -12475,7 +12475,7 @@ Added by Ángel de Vicente",727238ee,Where can I find more information about the
 
 3. **Start the Docker Daemon on Linux**: If you are using Linux, you can start the Docker daemon with the following commands:
    - `sudo dockerd`
-   - `sudo service docker start` 
+   - `sudo service docker start`
 
 These steps should help resolve the connection issue with the Docker daemon.","Due to the uncertainties associated with machines, sometimes you can get the error message like this when you try to run a docker command:
 ”Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?”
@@ -12484,20 +12484,20 @@ Just enable additional distros. That’s all. Even if the additional distro is t
 Odimegwu David",85d4901d,What should I do if WSL cannot connect to the Docker daemon?,machine-learning-zoomcamp,0.89813507
 "To resolve the error 'Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?', you can try the following solutions based on your environment:
 
-1. **For WSL**: Re-install Docker by removing the current installation from WSL and then installing Docker Desktop on your host machine (Windows). 
+1. **For WSL**: Re-install Docker by removing the current installation from WSL and then installing Docker Desktop on your host machine (Windows).
 
 2. **For Linux**: Start the Docker daemon using one of the following commands:
    - `sudo dockerd`
    - `sudo service docker start`
 
-3. **For WSL Integration Issues**: Check your Docker Desktop settings. Go to the settings, click on resources, and then click on WSL Integration. Enable additional distros to ensure that Docker Desktop is properly connecting to the WSL Linux distro. 
+3. **For WSL Integration Issues**: Check your Docker Desktop settings. Go to the settings, click on resources, and then click on WSL Integration. Enable additional distros to ensure that Docker Desktop is properly connecting to the WSL Linux distro.
 
 These steps should help you resolve the connection issue with the Docker daemon.","Due to the uncertainties associated with machines, sometimes you can get the error message like this when you try to run a docker command:
 ”Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?”
 Solution: The solution is simple. The Docker Desktop might no longer be connecting to the WSL Linux distro. What you need to do is go to your Docker Desktop setting and then click on resources. Under resources, click on WSL Integration. You will get a tab like the image below:
 Just enable additional distros. That’s all. Even if the additional distro is the same as the default WSL distro.
 Odimegwu David",85d4901d,How do I resolve the error: 'Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?',machine-learning-zoomcamp,0.9272847
-"Docker Desktop might stop connecting to your WSL Linux distro due to uncertainties with the system, which can trigger error messages related to the Docker daemon not being accessible. If you encounter a message like “Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?”, it indicates that Docker Desktop may no longer be linked to your WSL distribution. 
+"Docker Desktop might stop connecting to your WSL Linux distro due to uncertainties with the system, which can trigger error messages related to the Docker daemon not being accessible. If you encounter a message like “Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?”, it indicates that Docker Desktop may no longer be linked to your WSL distribution.
 
 To resolve this, you should go into your Docker Desktop settings, navigate to the resources section, and click on WSL Integration. From there, enable any additional distros, even if they are the same as your default WSL distro.","Due to the uncertainties associated with machines, sometimes you can get the error message like this when you try to run a docker command:
 ”Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?”
@@ -12516,7 +12516,7 @@ Just enable additional distros. That’s all. Even if the additional distro is t
 Odimegwu David",85d4901d,Do I need to enable additional distros even if they are the same as the default WSL distro?,machine-learning-zoomcamp,0.457462
 "If the HPA instance doesn't work correctly even after installing the latest Metrics Server, you can take the following steps:
 
-1. Run the command: 
+1. Run the command:
    ```
    kubectl edit deploy -n kube-system metrics-server
    ```
@@ -12539,7 +12539,7 @@ Odimegwu David",85d4901d,Do I need to enable additional distros even if they are
 Alternatively, you can apply a metrics server deployment file that already includes the `- --kubelet-insecure-tls` option by running:
 ```
 kubectl apply -f https://raw.githubusercontent.com/Peco602/ml-zoomcamp/main/10-kubernetes/kube-config/metrics-server-deployment.yaml
-``` 
+```
 
 This should help resolve the issue with the HPA instance.","In case the HPA instance does not run correctly even after installing the latest version of Metrics Server from the components.yaml manifest with:
 >>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
@@ -12646,7 +12646,7 @@ args:
 - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
 Save and run again >>kubectl get hpa
 Added by Marilina Orihuela",df023a13,What line should be added to the metrics-server args to fix the HPA target issue?,machine-learning-zoomcamp,0.8577149
-"After editing the metrics-server, you should run the command: 
+"After editing the metrics-server, you should run the command:
 
 >>kubectl get hpa","In case the HPA instance does not run correctly even after installing the latest version of Metrics Server from the components.yaml manifest with:
 >>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
@@ -12684,7 +12684,7 @@ Added by Marilina Orihuela",df023a13,What command do we run after editing the me
 Alternatively, you can apply a metrics server deployment file that already includes the `- --kubelet-insecure-tls` option by running this command:
 ```
 kubectl apply -f https://raw.githubusercontent.com/Peco602/ml-zoomcamp/main/10-kubernetes/kube-config/metrics-server-deployment.yaml
-``` 
+```
 
 Both methods can help resolve the issue with the HPA instance.","In case the HPA instance does not run correctly even after installing the latest version of Metrics Server from the components.yaml manifest with:
 >>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
@@ -12716,7 +12716,7 @@ Added by Giovanni Pecoraro",48e92d65,What should I do if the HPA instance does n
      ```
      kubectl apply -f https://raw.githubusercontent.com/Peco602/ml-zoomcamp/main/10-kubernetes/kube-config/metrics-server-deployment.yaml
      ```
-   - After applying this, check your HPA again. 
+   - After applying this, check your HPA again.
 
 By following either of these methods, you should be able to fix the issue with targets showing as <unknown>.","In case the HPA instance does not run correctly even after installing the latest version of Metrics Server from the components.yaml manifest with:
 >>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
@@ -12745,7 +12745,7 @@ Run the following command:
 kubectl apply -f https://raw.githubusercontent.com/Peco602/ml-zoomcamp/main/10-kubernetes/kube-config/metrics-server-deployment.yaml
 Which uses a metrics server deployment file already embedding the - --kubelet-insecure-tls option.
 Added by Giovanni Pecoraro",48e92d65,What option is already embedded in the metrics server deployment file provided by Giovanni Pecoraro?,machine-learning-zoomcamp,0.7142145
-"You can find the metrics server deployment file that includes the `--kubelet-insecure-tls` option at the following URL: 
+"You can find the metrics server deployment file that includes the `--kubelet-insecure-tls` option at the following URL:
 
 ```
 https://raw.githubusercontent.com/Peco602/ml-zoomcamp/main/10-kubernetes/kube-config/metrics-server-deployment.yaml
@@ -12798,7 +12798,7 @@ Solution description :
 I was able to install the libraries using below command:
 pip --user install grpcio==1.42.0 tensorflow-serving-api==2.7.0
 Asia Saeed",1685cae4,Which specific versions of grpcio and tensorflow-serving-api should I install to avoid the OSError error on Windows?,machine-learning-zoomcamp,0.7921518
-"A possible solution to avoid permission issues while installing packages using pip on a Windows machine is to use the `--user` option. You can do this by running the command: 
+"A possible solution to avoid permission issues while installing packages using pip on a Windows machine is to use the `--user` option. You can do this by running the command:
 
 ```
 pip --user install <package-name>
@@ -12953,7 +12953,7 @@ Asia Saeed",4fb7b21e,How did Asia Saeed resolve the protobuf issue in the virtua
 
 3. After downloading, copy the executable file to a specified folder on your C drive.
 
-4. Finally, add the path of this folder to the PATH environment variable in your system settings. 
+4. Finally, add the path of this folder to the PATH environment variable in your system settings.
 
 This method allows you to set up kubectl conveniently on your Windows machine.","To install kubectl on windows using the terminal in vscode (powershell), I followed this tutorial: https://medium.com/@ggauravsigra/install-kubectl-on-windows-af77da2e6fff
 I first downloaded kubectl with curl, with these command lines: https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/#install-kubectl-binary-with-curl-on-windows
@@ -13072,22 +13072,22 @@ It works perfectly.",7c31bc9a,What command should I use to install Kind after co
 It works perfectly.",7c31bc9a,How can I verify that Kind has been installed successfully?,machine-learning-zoomcamp,0.48068625
 "To resolve the 'connection to the server localhost:8080 was refused' issue with kubectl, you can follow these steps:
 
-1. Run the command to delete the existing cluster:  
+1. Run the command to delete the existing cluster:
    ```
    kind delete cluster
    ```
 
-2. Remove the existing kube configuration directory:  
+2. Remove the existing kube configuration directory:
    ```
    rm -rf ~/.kube
    ```
 
-3. Create a new cluster:  
+3. Create a new cluster:
    ```
    kind create cluster
    ```
 
-After completing these steps, try the kubectl command again, such as:  
+After completing these steps, try the kubectl command again, such as:
 ```
 kubectl get service
 ```
@@ -13152,7 +13152,7 @@ Added by Martin Uribe",605efc12,Is there an alternative solution to fixing the '
 
 1. `kind delete cluster`
 2. `rm -rf ~/.kube`
-3. `kind create cluster` 
+3. `kind create cluster`
 
 This approach involved starting over the Kubernetes cluster setup.","I ran into an issue where kubectl wasn't working.
 I kept getting the following error:
@@ -13284,7 +13284,7 @@ Added by Andrii Larkin",59823c72,Why are CPU requests and limits specified in mi
 
 ```
 kind -n clothing-model load docker-image zoomcamp-10-model:xception-v4-001
-``` 
+```
 
 This will ensure the correct cluster is referenced when loading the image.","Problem: Failing to load docker-image to cluster (when you’ved named a cluster)
 kind load docker-image zoomcamp-10-model:xception-v4-001
@@ -13364,7 +13364,7 @@ Alejandro Aponte",0a406fe0,Why am I getting the error 'kind' is not recognized a
    ```
    curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.17.0/kind-windows-amd64
    ```
-   the default name of the executable will be `kind-windows-amd64.exe`. 
+   the default name of the executable will be `kind-windows-amd64.exe`.
 
 2. You need to rename this file to `kind.exe`.
 
@@ -13390,7 +13390,7 @@ Alejandro Aponte",0a406fe0,What is the solution when 'kind' is not operable afte
 
 1. Rename the default downloaded file `kind-windows-amd64.exe` to `kind.exe`.
 2. Move this `kind.exe` file to a specific folder.
-3. Add the folder containing `kind.exe` to your system's PATH environment variable. 
+3. Add the folder containing `kind.exe` to your system's PATH environment variable.
 
 After completing these steps, you should be able to run `kind --version` successfully.","Problem: I download kind from the next command:
 curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.17.0/kind-windows-amd64
@@ -13438,7 +13438,7 @@ In video 10.3, when I was testing a flask service, I got the above error. I ran 
 Solution: This error has something to do with versions of Flask and Werkzeug. I got the same error, if I just import flask with from flask import Flask.
 By running pip freeze > requirements.txt,I found that their versions are Flask==2.2.2 and Werkzeug==2.2.2. This error appears while using an old version of werkzeug (2.2.2) with new version of flask (2.2.2). I solved it by pinning version of Flask into an older version with pipenv install Flask==2.1.3.
 Added by Bhaskar Sarma",d6d483ce,What solution can you offer for the TypeError related to 'unbound_message' when importing Flask?,machine-learning-zoomcamp,0.7031118
-"The TypeError you're encountering in video 10.3 while running `docker` and then `python gateway.py` has to do with the versions of Flask and Werkzeug being incompatible. Specifically, the error message indicates that there is an unexpected keyword argument 'unbound_message' when importing Flask. 
+"The TypeError you're encountering in video 10.3 while running `docker` and then `python gateway.py` has to do with the versions of Flask and Werkzeug being incompatible. Specifically, the error message indicates that there is an unexpected keyword argument 'unbound_message' when importing Flask.
 
 This issue occurs when you're using an old version of Werkzeug (2.2.2) alongside a newer version of Flask (2.2.2). To resolve this, you can downgrade the version of Flask to an earlier version that is compatible by running the command:
 
@@ -13470,7 +13470,7 @@ In video 10.3, when I was testing a flask service, I got the above error. I ran 
 Solution: This error has something to do with versions of Flask and Werkzeug. I got the same error, if I just import flask with from flask import Flask.
 By running pip freeze > requirements.txt,I found that their versions are Flask==2.2.2 and Werkzeug==2.2.2. This error appears while using an old version of werkzeug (2.2.2) with new version of flask (2.2.2). I solved it by pinning version of Flask into an older version with pipenv install Flask==2.1.3.
 Added by Bhaskar Sarma",d6d483ce,What steps did Bhaskar Sarma suggest to solve the TypeError related to Flask version issues?,machine-learning-zoomcamp,0.78215456
-"When you encounter the error ""aws: error: argument operation: Invalid choice"" while using the command `aws ecr get-login --no-include-email`, you should switch to using the command `aws ecr get-login-password`. 
+"When you encounter the error ""aws: error: argument operation: Invalid choice"" while using the command `aws ecr get-login --no-include-email`, you should switch to using the command `aws ecr get-login-password`.
 
 You can use the following command, replacing `<ACCOUNT_NUMBER>` and `<REGION>` with your specific values:
 
@@ -13569,7 +13569,7 @@ Added by Daniel Egbo",5bda3b94,What is the solution for the TensorFlow Serving e
    ```
    docker pull emacski/tensorflow-serving:latest
    ```
-   
+
 2. Run the container with this image using:
    ```
    docker run -it --rm \
@@ -13610,7 +13610,7 @@ docker run -it --rm \
 -v $(pwd)/clothing-model:/models/clothing-model/1 \
 -e MODEL_NAME=""clothing-model"" \
 emacski/tensorflow-serving:latest-linux_arm64
-``` 
+```
 
 Additionally, for those using Mac M2 or who encounter illegal instruction errors, the suggestion is to use the `bitnami/tensorflow-serving:2` image instead.","While trying to run the docker code on M1:
 docker run --platform linux/amd64 -it --rm \
@@ -13860,7 +13860,7 @@ docker run -d \
 -v $(pwd)/clothing-model:/bitnami/model-data/1 \
 -e TENSORFLOW_SERVING_MODEL_NAME=clothing-model \
 bitnami/tensorflow-serving:2
-``` 
+```
 
 This command will start the TensorFlow Serving container, set the appropriate ports, mount your model directory, and set the model name environment variable.","Similar to the one above but with a different solution the main reason is that emacski doesn’t seem to maintain the repo any more, the latest image is from 2 years ago at the time of writing (December 2023)
 Problem:
@@ -14224,7 +14224,7 @@ Bonus points for deploying the service to the cloud",9eb52679,Where can I find d
 4. Train multiple models, tune their performance, and select the best model.
 5. Export the notebook into a script.
 6. Deploy your model into a web service and run it locally using Docker.
-7. Optionally, earn bonus points by deploying the service to the cloud. 
+7. Optionally, earn bonus points by deploying the service to the cloud.
 
 Make sure to check your cohort's folder for any different or additional instructions that may apply.","These links apply to all projects, actually. Again, for some cohorts, the modules/syllabus might be different, so always check in your cohort’s folder as well for additional or different instructions, if any.
 Midterm Project Sample: https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp/cohorts/2021/07-midterm-project
@@ -14329,12 +14329,12 @@ Confirmed on Slack by Alexey Grigorev (added by Rileen Sinha)",1fd83eb9,Do peer 
 "To find the projects you need to review for the capstone, you should follow these steps:
 
 1. Obtain your email's hash value by running the provided Python code. Replace `Example1@gmail.com` with your email address.
-   
+
    ```python
    from hashlib import sha1
    def compute_hash(email):
        return sha1(email.lower().encode('utf-8')).hexdigest()
-   
+
    email = ""YourEmail@example.com""  # Replace with your email
    hashed_email = compute_hash(email)
    print(""Original Email:"", email)
@@ -14575,9 +14575,9 @@ Put the class into a separate module and import it in both the script that saves
 Note: If Flask is used (no waitress) in predict.py, and predict.py has the definition of the class, When  it is run: python predict.py, it will work because the class is in the same namespace as the one used when the model was saved (__main__).
 Detailed info: https://stackoverflow.com/questions/27732354/unable-to-load-files-using-pickle-and-multiple-modules
 Marcos MJD",236864c2,What causes pickle to throw an attribute error when running a Docker container with waitress?,machine-learning-zoomcamp,0.9001266
-"The reason pickle works with Flask but not with waitress for your custom column transformer class is that when the model was saved, it was done from the `__main__` module (for example, using `python train.py`). Pickle tries to reference the class in the global namespace as `__main__.<custom_class>`. 
+"The reason pickle works with Flask but not with waitress for your custom column transformer class is that when the model was saved, it was done from the `__main__` module (for example, using `python train.py`). Pickle tries to reference the class in the global namespace as `__main__.<custom_class>`.
 
-When using Flask directly (without waitress), the class is found in the same namespace as the one used when the model was saved. However, when using waitress, it loads the `predict_app` module, which causes pickle to look for `__main__.<custom_class>`, but that doesn't exist in this context. 
+When using Flask directly (without waitress), the class is found in the same namespace as the one used when the model was saved. However, when using waitress, it loads the `predict_app` module, which causes pickle to look for `__main__.<custom_class>`, but that doesn't exist in this context.
 
 The solution is to place the custom column transformer class into a separate module and import it in both the script that saves the model and the script that loads it. This way, both scripts will reference the class correctly, regardless of whether they are run with Flask or waitress.","When running a docker container with waitress serving the app.py for making predictions, pickle will throw an error that can't get attribute <name_of_class> on module __main__.
 This does not happen when Flask is used directly, i.e. not through waitress.
@@ -14658,7 +14658,7 @@ packages: # Additional pip packages required by the service
 - xgboost
 - scikit-learn
 - pydantic
-``` 
+```
 
 This should resolve the issue.","I was getting the below error message when I was trying to create docker image using bentoml
 [bentoml-cli] `serve` failed: Failed loading Bento from directory /home/bentoml/bento: Failed to import module ""service"": No module named 'sklearn'
@@ -14676,7 +14676,7 @@ packages: # Additional pip packages required by the service
 - xgboost
 - scikit-learn
 - pydantic
-``` 
+```
 
 This modification should resolve the issue.","I was getting the below error message when I was trying to create docker image using bentoml
 [bentoml-cli] `serve` failed: Failed loading Bento from directory /home/bentoml/bento: Failed to import module ""service"": No module named 'sklearn'
@@ -14694,7 +14694,7 @@ packages: # Additional pip packages required by the service
 - xgboost
 - scikit-learn
 - pydantic
-``` 
+```
 
 Make sure to make this change to avoid the import error.","I was getting the below error message when I was trying to create docker image using bentoml
 [bentoml-cli] `serve` failed: Failed loading Bento from directory /home/bentoml/bento: Failed to import module ""service"": No module named 'sklearn'
@@ -14765,7 +14765,7 @@ Related slack conversation here.
 "If you are unable to run the scripts, you should verify the following:
 
 1. Ensure that all necessary files to reproduce the environment are present, particularly the dataset and any instructions.
-2. Check for any obvious errors that might prevent the scripts from running. 
+2. Check for any obvious errors that might prevent the scripts from running.
 
 This will help identify potential issues that could be causing the problem.","Problem description:
 Do we have to run everything?
@@ -14945,7 +14945,7 @@ Marcos MJD",8c7f089f,What steps should I take if ImageDataGenerator gives an err
 Check that scipy is installed in your environment.
 Restart jupyter kernel and try again.
 Marcos MJD",8c7f089f,How do I fix 'ImageDataGenerator name scipy is not defined' when using flow_from_dataframe?,machine-learning-zoomcamp,0.8563877
-"The solution for the 'scipy is not defined' error when using ImageDataGenerator is to ensure that scipy is installed in your environment. You can check this by running the following command in a new cell: 
+"The solution for the 'scipy is not defined' error when using ImageDataGenerator is to ensure that scipy is installed in your environment. You can check this by running the following command in a new cell:
 
 ```python
 !pip install scipy
@@ -14976,7 +14976,7 @@ Konrad Muehlberg",739bcccf,Can you direct me to Tim's video on using BentoML wit
 url = 'https://github.com/bhasarma/kitchenware-classification-project/blob/main/test-image.jpg'
 ```
 
-to 
+to
 
 ```
 url = 'https://github.com/bhasarma/kitchenware-classification-project/blob/main/test-image.jpg?raw=true'
@@ -15029,7 +15029,7 @@ Solution:
 Add ?raw=true after .jpg in url. E.g. as below
 url = ‘https://github.com/bhasarma/kitchenware-classification-project/blob/main/test-image.jpg?raw=true’
 Bhaskar Sarma",4603e4e5,What change should I make to a GitHub image URL to avoid UnidentifiedImageError in my deployment?,machine-learning-zoomcamp,0.7351994
-"The UnidentifiedImageError occurs because the URL you are using does not directly link to the .jpg image file itself. Instead, it links to a GitHub page that displays the image. To resolve this issue, you need to append ""?raw=true"" to the end of the URL. For example, modify your URL as follows: 
+"The UnidentifiedImageError occurs because the URL you are using does not directly link to the .jpg image file itself. Instead, it links to a GitHub page that displays the image. To resolve this issue, you need to append ""?raw=true"" to the end of the URL. For example, modify your URL as follows:
 
 ```python
 url = 'https://github.com/bhasarma/kitchenware-classification-project/blob/main/test-image.jpg?raw=true'
@@ -15050,7 +15050,7 @@ Bhaskar Sarma",4603e4e5,Why do I get UnidentifiedImageError with a .jpg image fr
 
 to:
 
-`https://github.com/bhasarma/kitchenware-classification-project/blob/main/test-image.jpg?raw=true`. 
+`https://github.com/bhasarma/kitchenware-classification-project/blob/main/test-image.jpg?raw=true`.
 
 This adjustment will allow the model to correctly interpret the image file.","In deploying model part, I wanted to test my model locally on a test-image data and I had this silly error after the following command:
 url = 'https://github.com/bhasarma/kitchenware-classification-project/blob/main/test-image.jpg'
@@ -15186,7 +15186,7 @@ Added by Andrii Larkin",aa13dd66,How can I get extra GPU hours with Saturn if I 
 4. Finally, extract the day of the year:
    ```python
    df['day_of_year'] = df['date_formatted'].dt.dayofyear
-   ```  
+   ```
 
 By following these steps, you will successfully combine the two columns into a `day_of_the_year` column in integer format.","Problem description: I have one column day_of_the_month . It has values 1, 2, 20, 25 etc. and int . I have a second column month_of_the_year. It has values jan, feb, ..dec. and are string. I want to convert these two columns into one column day_of_the_year and I want them to be int. 2 and jan should give me 2, i.e. 2nd day of the year, 1 and feb should give me 32, i.e. 32 nd day of the year. What is the simplest pandas-way to do it?
 Solution description:
@@ -15204,7 +15204,7 @@ get day of year with: df['day_of_year']=df['date_formatted'].dt.dayofyear
 (Bhaskar Sarma)",c41e479c,How can I convert day_of_the_month and month_of_the_year columns into a single day_of_the_year column in pandas?,machine-learning-zoomcamp,0.827808
 "According to Bhaskar Sarma, the simplest way to get the day of the year from day and month columns in pandas is as follows:
 
-1. Convert the `day_of_the_month` column from int to str: 
+1. Convert the `day_of_the_month` column from int to str:
    ```python
    df['day_of_the_month'] = df['day_of_the_month'].map(str)
    ```
@@ -15382,7 +15382,7 @@ classes, predictions = zip(*dict(zip(classes, predictions)).items())
 plt.figure(figsize=(12, 3))
 plt.bar(classes, predictions)
 Luke",2f28dcf1,How do I visualize predictions per class after training a neural net?,machine-learning-zoomcamp,0.9126478
-"The solution description for visualizing class predictions is as follows: 
+"The solution description for visualizing class predictions is as follows:
 
 You can visualize the predictions per class after training a neural network by using the code:
 
@@ -15402,7 +15402,7 @@ Luke",2f28dcf1,What is the solution description for visualizing class prediction
 
 1. **Prepare Your Data**: Ensure you have your class labels and corresponding prediction values. These should be in a format that allows easy pairing, such as two lists or arrays.
 
-2. **Zip the Data**: Combine the classes and predictions into pairs. You can do this using the `zip` function along with `dict` to create a dictionary and then unzip it. 
+2. **Zip the Data**: Combine the classes and predictions into pairs. You can do this using the `zip` function along with `dict` to create a dictionary and then unzip it.
    ```python
    classes, predictions = zip(*dict(zip(classes, predictions)).items())
    ```
@@ -15432,7 +15432,7 @@ Luke",2f28dcf1,Can you provide a step-by-step guide to create a bar chart for pr
 
 1. Zip the classes and predictions together into a dictionary.
 2. Unzip the items from the dictionary to separate the classes and predictions.
-3. Use the `plt.bar()` function to create a bar chart with classes on the x-axis and predictions on the y-axis. 
+3. Use the `plt.bar()` function to create a bar chart with classes on the x-axis and predictions on the y-axis.
 4. Set the figure size using `plt.figure(figsize=(12, 3))` before creating the bar chart.
 
 Here's the code to implement this:
@@ -15465,21 +15465,21 @@ Luke",2f28dcf1,How do I use matplotlib to visualize neural net class predictions
 
 ```python
 df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""])
-```","You can convert the prediction output values to a datafarme using 
+```","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,How can I convert dictionary values to a DataFrame table?,machine-learning-zoomcamp,0.8572527
 "You can transform the prediction output values into a DataFrame using the following method:
 
 ```python
 df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""])
-```","You can convert the prediction output values to a datafarme using 
+```","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,What is the method to transform prediction output values into a DataFrame?,machine-learning-zoomcamp,0.9433377
 "To change a dictionary to a DataFrame, you can use the following code:
 
 ```python
 df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""])
-```","You can convert the prediction output values to a datafarme using 
+```","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,What code do I use to change a dictionary to a DataFrame?,machine-learning-zoomcamp,0.7713217
 "You can convert dictionary values to a DataFrame using the following code:
@@ -15488,14 +15488,14 @@ Edidiong Esu",7a69cccf,What code do I use to change a dictionary to a DataFrame?
 df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""])
 ```
 
-This will create a DataFrame with the dictionary values, where the keys of the dictionary become the index and the specified columns will contain the values.","You can convert the prediction output values to a datafarme using 
+This will create a DataFrame with the dictionary values, where the keys of the dictionary become the index and the specified columns will contain the values.","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,How do I use pd.DataFrame.from_dict to convert dictionary values?,machine-learning-zoomcamp,0.8296122
 "You can convert a dictionary to a DataFrame using the following sample code:
 
 ```python
 df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""])
-```","You can convert the prediction output values to a datafarme using 
+```","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,Can you provide a sample code to convert a dictionary to a DataFrame?,machine-learning-zoomcamp,0.84773254
 "The image dataset for the Kitchenware Classification Competition has a different layout compared to the one used in the dino vs dragon lesson. To accommodate those who preferred the previous setup, a script was provided to generate it in the desired format. This script can be found on Kaggle.","The image dataset for the competition was in a different layout from what we used in the dino vs dragon lesson. Since that’s what was covered, some folks were more comfortable with that setup, so I wrote a script that would generate it for them
@@ -15554,7 +15554,7 @@ ANS: See this link for a guide (https://www.kaggle.com/code/dansbecker/finding-y
 
 2. **Install NVIDIA Drivers**: Install the appropriate NVIDIA drivers for your GPU from [NVIDIA Drivers](https://www.nvidia.com/download/index.aspx).
 
-3. **Install CUDA and cuDNN**: 
+3. **Install CUDA and cuDNN**:
    - Make sure to install the CUDA toolkit 11.x.x from the [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive).
    - Download and install cuDNN from [cuDNN Download](https://developer.nvidia.com/rdp/cudnn-download).
 
@@ -15591,9 +15591,9 @@ ANS (by ezehcp7482@gmail.com): Yes, provide the linkedIN link to where you poste
 ezehcp7482@gmail.com:
 PROBLEM: Since I had to put up a link to a public repository, I had to use Kaggle and uploading the dataset therein was a bit difficult; but I had to ‘google’ my way out.
 ANS: See this link for a guide (https://www.kaggle.com/code/dansbecker/finding-your-files-in-kaggle-kernels/notebook)",f2cd48b6,What is the method to install TensorFlow-GPU using Anaconda?,machine-learning-zoomcamp,0.5547111
-"To install TensorFlow on WSL/Linux using pip, first, ensure that you have the necessary CUDA and cuDNN installed if you plan to use GPU support. You can find resources for setting up CUDA on WSL and for installing TensorFlow with pip. 
+"To install TensorFlow on WSL/Linux using pip, first, ensure that you have the necessary CUDA and cuDNN installed if you plan to use GPU support. You can find resources for setting up CUDA on WSL and for installing TensorFlow with pip.
 
-Specifically, you can reference the installation instructions in the CUDA Toolkit Documentation and use the pip command to install TensorFlow once your environment is set up properly. 
+Specifically, you can reference the installation instructions in the CUDA Toolkit Documentation and use the pip command to install TensorFlow once your environment is set up properly.
 
 For example, you could use the command:
 
@@ -15778,7 +15778,7 @@ Download data:
 
 ```bash
 !wget -P /content/drive/My\ Drive/Downloads/ URL
-``` 
+```
 
 Replace `URL` with the actual URL of the file you want to download.","Install w get:
 !which wget
@@ -15956,7 +15956,7 @@ The solution was to add Python311 installation folder to the PATH and restart th
 
 1. Ensure that the installation folder for Python 3.11 is added to the PATH.
 2. Restart the system.
-3. Run the Docker file again. 
+3. Run the Docker file again.
 
 These steps resolved the error related to Python not being found.","When trying to rerun the docker file in Windows, as opposed to developing in WSL/Linux, I got the error of:
 ```

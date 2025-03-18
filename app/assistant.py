@@ -4,11 +4,11 @@ import json
 
 from openai import OpenAI
 from elasticsearch import Elasticsearch
-from sentence_transformers import SentenceTransformers 
+from sentence_transformers import SentenceTransformers
 
 ELASTIC_URL = os.getenv("ELASTIC_URL", "http")
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http/")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") 
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 es_client = Elasticsearch(ELASTIC_URL)
 ollama_client = OpenAI(OLLAMA_URL)
@@ -34,7 +34,7 @@ def elastic_search_text(query,course, index_name="course-questions"):
         },
     }
 
-    response = es_client.search(index= index_name, body= search_query) 
+    response = es_client.search(index= index_name, body= search_query)
     return [hit['_source'] for hit in response['hits']['hits']]
 
 
@@ -51,10 +51,10 @@ def elastic_search_knn(field, vector, course, index_name="course-questions"):
         "knn" : knn,
         "_source" : ["text", "section", "question", "course", "id"]
     }
-    
+
     es_result = es_client.search( index = index_name, body = search_query)
     return [hit['_source'] for hit in response['hits']['hits']]
-    
+
 
 def build_prompt(query, search_results):
     prompt_template = """
@@ -63,7 +63,7 @@ Use only the facts from the CONTEXT when answering the QUESTION.
 
 QUESTION: {question}
 
-CONTEXT: 
+CONTEXT:
 {context}""".strip()
 
     context =  "\n\n".join(
@@ -137,16 +137,16 @@ def evaluate_relevance(question, answer):
         return json_eval['Relevance'], json_eval['Explanation'], tokens
     except json.JSONDecodeError:
         return "UNKNOWN", "Failed to parse evaluation", tokens
-    
+
 
 def calculate_openai_cost(model_choice, tokens):
     openai_cost = 0
 
-    if model_choice == 'openai/gpt-4o-mini':# check current openai pricing 
+    if model_choice == 'openai/gpt-4o-mini':# check current openai pricing
         openai_cost = (tokens['prompt_tokens']* 0.0015 + tokens['completion_tokens'] * 0.002) / 1000
     elif model_choice == 'openai/gpt-4o':
         openai_cost = (tokens['prompt_tokens']* 0.03 + tokens['completion_tokens'] * 0.06) / 1000
-    
+
     return openai_cost
 
 
@@ -156,7 +156,7 @@ def get_answer(query, course, model_choice, search_type):
         search_results = elastic_search_knn('question_text_vector', vector, course)
     else:
         search_results = elastic_search_text(query, course)
-    
+
 
     prompt = build_prompt(query, search_results)
     answer, tokens, response_time = llm(prompt, model_choice)
@@ -178,10 +178,4 @@ def get_answer(query, course, model_choice, search_type):
         'eval_completion_tokens': eval_tokens['completion_tokens'],
         'eval_total_tokens': eval_tokens['total_tokens'],
         'openai_cost': openai_cost
-    } 
-
-
-
-    
-
-    
+    }

@@ -375,7 +375,7 @@ The quotes are required to denote that your email is a string.
 (By Wesley Barreto)
 You can also use this website directly by entering your email: http://www.sha1-online.com. Then, you just have to copy and paste your hashed email in the “research” bar of the leaderboard to get your scores.
 (Mélanie Fouesnard)",dab5a24a,How do I use the hashed email to check my scores on the leaderboard?,machine-learning-zoomcamp,0.88543934
-"To resolve the issue of 'wget is not recognized as an internal or external command' on a Windows system, you need to install wget. 
+"To resolve the issue of 'wget is not recognized as an internal or external command' on a Windows system, you need to install wget.
 On Windows, the easiest way to install wget is to use Chocolatey:
 choco install wget
 Alternatively, you can download a binary from the wget website and put it in any location in your PATH (e.g. C:/tools/).","If you get “wget is not recognized as an internal or external command”, you need to install it.
@@ -414,7 +414,7 @@ On any Python-enabled device or platform, you can use the urllib.request.urlretr
 
 ```
 brew install wget
-``` 
+```
 
 This will install wget on your Mac.","If you get “wget is not recognized as an internal or external command”, you need to install it.
 On Ubuntu, run
@@ -448,7 +448,7 @@ Urllib.request.urlretrieve() is a standard Python library function available on 
 The urlretrieve() function allows you to download files from URLs and save them locally. Python programs use it to download files from the internet.
 On any Python-enabled device or platform, you can use the urllib.request.urlretrieve() function to download the file.
 (Mohammad Emad Sharifi)",49f9bda9,What are the steps to install wget on a Mac?,machine-learning-zoomcamp,0.46878386
-"Yes, you can use Python to perform the same task as wget. You can do this by installing the Python wget library and using the following command in your Python code: 
+"Yes, you can use Python to perform the same task as wget. You can do this by installing the Python wget library and using the following command in your Python code:
 
 ```
 import wget
@@ -583,7 +583,7 @@ To download the data too. The exclamation mark !, lets you execute shell command
 For instance, if you then want to move your data into a data directory alongside your notebook-containing directory, you could execute the following:
 !mkdir -p ../data/
 !mv housing.csv ../data/",d44de7d1,"How can I execute shell commands like ls, cp, and mkdir in a Jupyter notebook?",machine-learning-zoomcamp,0.29566318
-"To create a directory named 'data', you can use the following command in Ubuntu: 
+"To create a directory named 'data', you can use the following command in Ubuntu:
 
 !mkdir data","You can use
 !wget https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
@@ -752,7 +752,7 @@ Unlike Linux/Mac OS, Windows uses the backslash (\) to navigate the files that c
 Here’s how we should be loading the file instead:
 df = pd.read_csv(r'C:\Users\username\Downloads\data.csv')
 (Muhammad Awon)",be760b92,Can you show an example of reading a file with Pandas in Windows?,machine-learning-zoomcamp,0.8720528
-"The command you should run to fix a '403 Forbidden' error when pushing to GitHub is: 
+"The command you should run to fix a '403 Forbidden' error when pushing to GitHub is:
 
 git config -l | grep url
 
@@ -1251,7 +1251,7 @@ Added by David Espejo",355348f0,What alternative can I use to Wget if I am using
 
 ```bash
 curl -o ./housing.csv https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
-``` 
+```
 
 In this example, `curl` is used to retrieve the file from the provided URL and save it as `housing.csv`.","Wget doesn't ship with macOS, so there are other alternatives to use.
 No worries, we got curl:
@@ -1319,7 +1319,7 @@ Also there is pandas.Series. round idf you need to round values in the whole Ser
 Please check the documentation
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.round.html#pandas.Series.round
 Added by Olga Rudakova",67afabf5,How can I round a number to 4 decimal places in Python?,machine-learning-zoomcamp,0.8590016
-"Yes, you can demonstrate using f-strings to format a number to 3 decimal places. Here is an example: 
+"Yes, you can demonstrate using f-strings to format a number to 3 decimal places. Here is an example:
 print(f'Average mark for the Homework is {avg:.3f}')","You can use round() function or f-strings
 round(number, 4)  - this will round number up to 4 decimal places
 print(f'Average mark for the Homework is {avg:.3f}') - using F string
@@ -1600,7 +1600,7 @@ df = pd.read_csv('housing.csv')","For users of kaggle notebooks, the dataset can
 Once the dataset is loaded to the kaggle notebook server, it can be read through the below pandas command
 df = pd.read_csv('housing.csv')
 Harish Balasundaram",8fe56032,How can I load the dataset directly into Kaggle Notebooks?,machine-learning-zoomcamp,0.9605524
-"To download the dataset to Kaggle Notebooks, you need to use the command: 
+"To download the dataset to Kaggle Notebooks, you need to use the command:
 !wget https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
 Remember to include the exclamation mark (!) before wget.","For users of kaggle notebooks, the dataset can be loaded through widget using the below command. Please remember that ! before wget is essential
 !wget https://raw.githubusercontent.com/alexeygrigorev/datasets/master/housing.csv
@@ -1649,7 +1649,7 @@ You can use | for ‘OR’, and & for ‘AND’
 Alternative:
 df = df[df['ocean_proximity'].isin(['<1H OCEAN', 'INLAND'])]
 Radikal Lukafiardi",af833e0a,What are the symbols used for 'OR' and 'AND' operations when filtering a dataset?,machine-learning-zoomcamp,0.50601375
-"Yes, an alternative method to filter a dataset by specific column values is by using the `isin` function in pandas. 
+"Yes, an alternative method to filter a dataset by specific column values is by using the `isin` function in pandas.
 You can use the following code:
 df = df[df['ocean_proximity'].isin(['<1H OCEAN', 'INLAND'])]","We can filter a dataset by using its values as below.
 df = df[(df[""ocean_proximity""] == ""<1H OCEAN"") | (df[""ocean_proximity""] == ""INLAND"")]
@@ -2246,7 +2246,7 @@ You might get an error when using multiple conditions in Pandas if you do not us
 Olga Rudakova provided the information about using multiple conditions in Pandas.,"If you would like to use multiple conditions as an example below you will get the error. The correct syntax for OR is |, and for AND is &
 (Olga Rudakova)
 –",225506b9,Who provided the information about using multiple conditions in Pandas?,machine-learning-zoomcamp,0.5122225
-"Yes, to apply multiple conditions in Pandas using logical AND use '&' and for logical OR use '|'. An example can be filtering a dataset by using its values like this: 
+"Yes, to apply multiple conditions in Pandas using logical AND use '&' and for logical OR use '|'. An example can be filtering a dataset by using its values like this:
 df = df[(df[""ocean_proximity""] == ""<1H OCEAN"") | (df[""ocean_proximity""] == ""INLAND"")]","If you would like to use multiple conditions as an example below you will get the error. The correct syntax for OR is |, and for AND is &
 (Olga Rudakova)
 –",225506b9,Can you explain the syntax for applying multiple conditions in Pandas?,machine-learning-zoomcamp,0.46219844
@@ -2404,7 +2404,7 @@ Pastor Soto",d2043cf5,Why don't we include df_train_full for the correlation mat
 "The validation data should not be included when performing EDA. Therefore, the dataset that includes the validation data is df_train_full.","Q2 asks about correlation matrix and converting median_house_value from numeric to binary. Just to make sure here we are only dealing with df_train not df_train_full, right? As the question explicitly mentions the train dataset.
 Yes. I think it is only on df_train. The reason behind this is that df_train_full also contains the validation dataset, so at this stage we don't want to make conclusions based on the validation data, since we want to test how we did without using that portion of the data.
 Pastor Soto",d2043cf5,"Which dataset includes the validation data, df_train or df_train_full?",machine-learning-zoomcamp,0.41318092
-"To color the background of a pandas.DataFrame based on numerical values it contains, you can use the method `pandas.io.formats.style.Styler.background_gradient`. 
+"To color the background of a pandas.DataFrame based on numerical values it contains, you can use the method `pandas.io.formats.style.Styler.background_gradient`.
 
 For example, to color the correlation matrix, you can use the following code:
 ```python
@@ -4125,7 +4125,7 @@ Cd ‘path’/ (go to this path)
 Pwd (home)
 Cat “file name’ --edit txt file in ubuntu
 Aileah Gotladera",620fb76e,How do I open and edit a text file in Ubuntu?,machine-learning-zoomcamp,0.5380986
-"To check the current Python version on your laptop, you can open your command prompt or terminal and run the following command: 
+"To check the current Python version on your laptop, you can open your command prompt or terminal and run the following command:
 ```
 python3 --version
 ```
@@ -4363,7 +4363,7 @@ print(waitress.__version__)
 ```","Import waitress
 print(waitress.__version__)
 Krishna Anand",7156679d,What code should I run in Jupyter to see the version of an installed Python package?,machine-learning-zoomcamp,0.54687965
-"If you are getting an error saying 'Cannot connect to the docker daemon' when trying to run hello-world, you should make sure the Docker daemon is running. On WSL, you can re-install Docker by removing the docker installation from WSL and installing Docker Desktop on your host machine (Windows). On Linux, you can start the docker daemon with either of these commands: 
+"If you are getting an error saying 'Cannot connect to the docker daemon' when trying to run hello-world, you should make sure the Docker daemon is running. On WSL, you can re-install Docker by removing the docker installation from WSL and installing Docker Desktop on your host machine (Windows). On Linux, you can start the docker daemon with either of these commands:
 - sudo dockerd
 - sudo service docker start
 
@@ -5477,7 +5477,7 @@ Waitress doesn’t accept a dash in the python file name.
 The solution is to rename the file replacing a dash with something else for instance with an underscore eg q4_predict.py
 Added by Alex Litvinov",c13d811f,How should I rename my file if it contains a dash for waitress-serve?,machine-learning-zoomcamp,0.5586742
 "To test HTTP POST requests from the command line using curl, you can run a request using the 'curl' command. For example, you can pipe the JSON data structure to the command with the following syntax:
-echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -5491,7 +5491,7 @@ Added by Sylvia Schmitt",dfb41f7e,How can I test HTTP POST requests from the com
 ```
 echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict
 ```
-This will send the POST request and allow you to test if it's working properly.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+This will send the POST request and allow you to test if it's working properly.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -5501,7 +5501,7 @@ echo '<json data>' | curl --json @- <url>
 echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}'\
 | curl --json @- http://localhost:9696/predict
 Added by Sylvia Schmitt",dfb41f7e,What is a simple way to check if HTTP POST requests work using the command line?,machine-learning-zoomcamp,0.80822134
-"Yes, you can use curl on WSL2, Linux, and MacOS to test HTTP POST requests.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+"Yes, you can use curl on WSL2, Linux, and MacOS to test HTTP POST requests.","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -5514,7 +5514,7 @@ Added by Sylvia Schmitt",dfb41f7e,"Can I use curl on WSL2, Linux, and MacOS to t
 "To pipe JSON data to curl for testing HTTP POST requests, you can use the following command structure:
 `echo '<json data>' | curl --json @- <url>`
 Example:
-`echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict`","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+`echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}' | curl --json @- http://localhost:9696/predict`","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -5526,7 +5526,7 @@ echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}'\
 Added by Sylvia Schmitt",dfb41f7e,How do you pipe JSON data to curl for testing HTTP POST requests?,machine-learning-zoomcamp,0.7160756
 "Yes, here is an example of using curl to test an HTTP POST request with JSON data:
 echo '{""job"": ""retired"", ""duration"": 445, ""poutcome"": ""success""}'\
-| curl --json @- http://localhost:9696/predict","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’. 
+| curl --json @- http://localhost:9696/predict","I wanted to have a fast and simple way to check if the HTTP POST requests are working just running a request from command line. This can be done running ‘curl’.
 (Used with WSL2 on Windows, should also work on Linux and MacOS)
 curl --json '<json data>' <url>
 # piping the structure to the command
@@ -6064,7 +6064,7 @@ pip install --upgrade pip
 For more about xgbboost and installation, check here:
 https://xgboost.readthedocs.io/en/stable/install.html
 Aminat Abolade",5017c9a4,Where can I find more detailed information about Xgboost installation?,machine-learning-zoomcamp,0.6804419
-"Yes, you can run the installation command for Xgboost directly in a Jupyter notebook by using the code: 
+"Yes, you can run the installation command for Xgboost directly in a Jupyter notebook by using the code:
 pip install xgboost","To install Xgboost, use the code below directly in your jupyter notebook:
 (Pip 21.3+ is required)
 pip install xgboost
@@ -6318,7 +6318,7 @@ Bhaskar Sarma",ddc14ada,Who provided the solution for setting a random seed in a
 "Someone might choose to run gunicorn directly instead of letting the Python file create the server because they both do the same thing, but running gunicorn directly involves less typing in the script.","They both do the same, it's just less typing from the script.",593f7569,Why might someone choose to run gunicorn directly instead of letting the Python file create the server?,machine-learning-zoomcamp,0.25963527
 "Yes, you can use gunicorn both from a Python file and directly to achieve the same result. It's just less typing from the script.","They both do the same, it's just less typing from the script.",593f7569,Can we use gunicorn both from a Python file and directly to achieve the same result?,machine-learning-zoomcamp,0.2804643
 "Based on the CONTEXT provided in the FAQ database, there is no advantage in terms of typing if we let the Python script create the server instead of running gunicorn directly. Both methods achieve the same result, with the only difference being that the Python script involves less typing.","They both do the same, it's just less typing from the script.",593f7569,Is there any advantage in terms of typing if we let the Python script create the server instead of running gunicorn directly?,machine-learning-zoomcamp,0.490996
-"If you cannot import the ping function in Decision Trees and Ensemble Learning, you can fix it by using the statement: 
+"If you cannot import the ping function in Decision Trees and Ensemble Learning, you can fix it by using the statement:
 
 from [file name] import ping.","When I tried to run example from the video using function ping and can not import it. I use import ping and it was unsuccessful. To fix it I use the statement:
 
@@ -6367,7 +6367,7 @@ You can address this error by replacing problematic characters in the feature na
 features = [f.replace('=<', '_').replace('=', '_') for f in features]
 This code will go through the list of features and replace any instances of ""=<"" with """", as well as any ""="" with """", ensuring that the feature names only consist of supported characters.",b6259dea,What characters in feature names can cause errors in decision tree models?,machine-learning-zoomcamp,0.5615004
 "To replace unsupported characters in feature names for decision trees, you can use the following code:
-features = [f.replace('=<', '_').replace('=', '_') for f in features] 
+features = [f.replace('=<', '_').replace('=', '_') for f in features]
 This code will replace any instances of ""=<"" with ""_"" and any ""="" with ""_"", ensuring that the feature names only consist of supported characters.","This error occurs because the list of feature names contains some characters like ""<"" that are not supported. To fix this issue, you can replace those problematic characters with supported ones. If you want to create a consistent list of features with no special characters, you can achieve it like this:
 You can address this error by replacing problematic characters in the feature names with underscores, like so:
 features = [f.replace('=<', '_').replace('=', '_') for f in features]
@@ -6381,7 +6381,7 @@ This code will go through the list of features and replace any instances of ""=<
 1. Extract the feature importances from the model.
 2. Sort the dataframe by feature_importances value in descending order.
 3. Create a horizontal bar chart with the feature importance values on the x-axis and feature names on the y-axis.
-   
+
 You can refer to this link for a visual implementation of feature importance in the scikit-learn library:
 https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html","To make it easier for us to determine which features are important, we can use a horizontal bar chart to illustrate feature importance sorted by value.
 1. # extract the feature importances from the model
@@ -6481,7 +6481,7 @@ Ahmed Okka",a7e7cdd2,Can I use mean_squared_error to compute RMSE in one step?,m
 https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html
 It actually adds std.errors to features importance -> so that you can trace stability of features (important for a model’s explainability) over the different params of the model.
 Ivan Brigida",55477da8,How can I visualize feature importance in scikit-learn?,machine-learning-zoomcamp,0.73065346
-"You can find an example of feature importance implementation in scikit-learn library here: 
+"You can find an example of feature importance implementation in scikit-learn library here:
 https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html
 The visual implementation includes std.errors to trace the stability of features over different parameters of the model.","I like this visual implementation of features importance in scikit-learn library:
 https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html
@@ -6512,7 +6512,7 @@ George Chizhmak",6a245a05,Who provided the solution for the XGBoostError?,machin
 "QUESTION: How do I sign up?
 
 ANSWER: Check the course GitHub repository for the sign-up link: https://airtable.com/shryxwLd0COOEaqXo","Information gain  in Y due to X, or the mutual information of Y and X
-Where  is the entropy of Y. 
+Where  is the entropy of Y.
 
 If X is completely uninformative about Y:
 If X is completely informative about Y: )
@@ -6728,7 +6728,7 @@ Create a folder to unzip your files:
 Unzip your files inside that folder
 !unzip dino-or-dragon.zip -d data
 Pastor Soto",551461b2,How do I upload Kaggle data to Saturn Cloud?,machine-learning-zoomcamp,0.89739466
-"To install the Kaggle package in Saturn Cloud, you should run the following command on your notebook: 
+"To install the Kaggle package in Saturn Cloud, you should run the following command on your notebook:
 ```
 !pip install -q kaggle
 ```","Problem description: Uploading the data to saturn cloud from kaggle can be time saving, specially if the dataset is large.
@@ -6854,7 +6854,7 @@ Osman Ali",c3ba4459,What is required to run TensorFlow with GPU on Ubuntu 22.04?
 The simplified guide to install CUDA and cuDNN on Ubuntu 22.04 is provided by Osman Ali.,"In order to run tensorflow with gpu on your local machine you’ll need to setup cuda and cudnn.
 The process can be overwhelming. Here’s a simplified guide
 Osman Ali",c3ba4459,Who provides a simplified guide to install CUDA and cuDNN on Ubuntu 22.04?,machine-learning-zoomcamp,0.42613763
-"To resolve the ValueError about loading weights saved in HDF5 format into a subclassed Model which has not created its variables yet, you need to call the Model first before loading the weights. 
+"To resolve the ValueError about loading weights saved in HDF5 format into a subclassed Model which has not created its variables yet, you need to call the Model first before loading the weights.
 Make sure to evaluate the model on input data before loading it: model.evaluate(train_ds) as mentioned in the problem description by Vladimir Yesipov.","Problem description:
 When loading saved model getting error: ValueError: Unable to load weights saved in HDF5 format into a subclassed Model which has not created its variables yet. Call the Model first, then load the weights.
 Solution description:
@@ -6941,7 +6941,7 @@ Solution description:
 when cloning the repo, you can also chose https - then it should work. This happens when you don't have your ssh key configured.
 <git clone https://github.com/alexeygrigorev/clothing-dataset-small.git>
 Added by Gregory Morris",34b0ebfc,Why am I getting a 'Host key verification failed' error when using 'git clone'?,machine-learning-zoomcamp,0.9405809
-"To solve the 'Host key verification failed' issue while cloning the clothing dataset repository, you can use https instead of ssh when cloning the repository. 
+"To solve the 'Host key verification failed' issue while cloning the clothing dataset repository, you can use https instead of ssh when cloning the repository.
 For example, run:
 <git clone https://github.com/alexeygrigorev/clothing-dataset-small.git>","Problem description:
 Getting an error using <git clone git@github.com:alexeygrigorev/clothing-dataset-small.git>
@@ -7093,7 +7093,7 @@ drop = keras.layers.Dropout(droprate)(inner)
 outputs = keras.layers.Dense(10)(drop)
 model = keras.Model(inputs, outputs)
 (Memoona Tahira)",b3997e6f,Why does my model complain about the number of channels when I reload it?,machine-learning-zoomcamp,0.6917218
-"To resolve the issue of the undefined channel dimension in your model architecture when saving, you need to explicitly specify the number of channels in the Input layer of the model. Make sure to define the number of channels in the input shape, for example: 
+"To resolve the issue of the undefined channel dimension in your model architecture when saving, you need to explicitly specify the number of channels in the Input layer of the model. Make sure to define the number of channels in the input shape, for example:
 
 ```python
 inputs = keras.Input(shape=(input_size, input_size, 3))
@@ -7414,7 +7414,7 @@ Added by Sylvia Schmitt",2023a9dc,What range should I test for the 'workers' par
 You can find more information on using 'workers' in 'model.fit()' in the official TensorFlow documentation at https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit.,"When running “model.fit(...)” an additional parameter “workers” can be specified for speeding up the data loading/generation. The default value is “1”. Try out which value between 1 and the cpu count on your system performs best.
 https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit
 Added by Sylvia Schmitt",2023a9dc,Where can I find more information on using 'workers' in 'model.fit()'?,machine-learning-zoomcamp,0.768047
-"To achieve reproducibility for training runs with TensorFlow, you can follow these instructions: set a seed point, use tf.keras.utils.set_random_seed(seed), and enable op determinism by using tf.config.experimental.enable_op_determinism(). This will work for a script if it gets executed multiple times.","Reproducibility for training runs can be achieved following these instructions: 
+"To achieve reproducibility for training runs with TensorFlow, you can follow these instructions: set a seed point, use tf.keras.utils.set_random_seed(seed), and enable op determinism by using tf.config.experimental.enable_op_determinism(). This will work for a script if it gets executed multiple times.","Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
@@ -7425,28 +7425,28 @@ Added by Sylvia Schmitt",468f69ff,How can I achieve reproducibility for training
 1. Set a seed point of 1234.
 2. Use tf.keras.utils.set_random_seed(seed) and tf.config.experimental.enable_op_determinism().
 3. This will work for a script if executed multiple times.
-4. Make sure the TF and TF Serving versions match (as per solution from the slack channel).","Reproducibility for training runs can be achieved following these instructions: 
+4. Make sure the TF and TF Serving versions match (as per solution from the slack channel).","Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
 tf.config.experimental.enable_op_determinism()
 This will work for a script, if this gets executed multiple times.
 Added by Sylvia Schmitt",468f69ff,What steps should I follow to ensure my TensorFlow model runs are reproducible?,machine-learning-zoomcamp,0.75911367
-"The role of the seed value for reproducibility in TensorFlow is to ensure that training runs can be reproduced consistently. By setting a seed value, you can control the random generation process, leading to the same behavior across multiple executions.","Reproducibility for training runs can be achieved following these instructions: 
+"The role of the seed value for reproducibility in TensorFlow is to ensure that training runs can be reproduced consistently. By setting a seed value, you can control the random generation process, leading to the same behavior across multiple executions.","Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
 tf.config.experimental.enable_op_determinism()
 This will work for a script, if this gets executed multiple times.
 Added by Sylvia Schmitt",468f69ff,What is the role of the seed value for reproducibility in TensorFlow?,machine-learning-zoomcamp,0.55855924
-Sylvia Schmitt added the instructions for achieving reproducibility in TensorFlow.,"Reproducibility for training runs can be achieved following these instructions: 
+Sylvia Schmitt added the instructions for achieving reproducibility in TensorFlow.,"Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
 tf.config.experimental.enable_op_determinism()
 This will work for a script, if this gets executed multiple times.
 Added by Sylvia Schmitt",468f69ff,Who added the instructions for achieving reproducibility in TensorFlow?,machine-learning-zoomcamp,0.6256788
-You can find the instructions for enabling operation determinism in TensorFlow by following this link: https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism.,"Reproducibility for training runs can be achieved following these instructions: 
+You can find the instructions for enabling operation determinism in TensorFlow by following this link: https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism.,"Reproducibility for training runs can be achieved following these instructions:
 https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/config/experimental/enable_op_determinism
 seed = 1234
 tf.keras.utils.set_random_seed(seed)
@@ -7911,9 +7911,9 @@ $ echo $REMOTE_URI
 Note: 1. no curly brackets (e.g. echo ${REMOTE_URI}) needed unlike in video 9.6,
 2. Replace REMOTE_URI with your URI
 (Bhaskar Sarma)",60fa95ed,How do I set the REMOTE_URI variable to my URI address?,machine-learning-zoomcamp,0.7965392
-"If you lose the REMOTE_URI variable after the session ends, you can set a local variable and assign your URI address in the terminal. For example, you can run the command: 
+"If you lose the REMOTE_URI variable after the session ends, you can set a local variable and assign your URI address in the terminal. For example, you can run the command:
 $ export REMOTE_URI=1111111111.dkr.ecr.us-west-1.amazonaws.com/clothing-tflite-images:clothing-model-xception-v4-001
-and then run: 
+and then run:
 $ echo $REMOTE_URI to check the URI address. Just remember that you will lose this variable once the session is terminated.","Solution description
 In the unit 9.6, Alexey ran the command echo ${REMOTE_URI} which turned the URI address in the terminal. There workaround is to set a local variable (REMOTE_URI) and assign your URI address in the terminal and use it to login the registry, for instance, REMOTE_URI=2278222782.dkr.ecr.ap-south-1.amazonaws.com/clothing-tflite-images (fake address). One caveat is that you will lose this variable once the session is terminated.
 I also had the same problem on Ubuntu terminal. I executed the following two commands:
@@ -7932,7 +7932,7 @@ $ echo $REMOTE_URI
 Note: 1. no curly brackets (e.g. echo ${REMOTE_URI}) needed unlike in video 9.6,
 2. Replace REMOTE_URI with your URI
 (Bhaskar Sarma)",60fa95ed,Why do I not need to use curly brackets in the echo command unlike in video 9.6?,machine-learning-zoomcamp,0.15935314
-"Based on the context provided in the FAQ database, you can replace REMOTE_URI with your own URI address by setting a local variable and assigning your URI address in the terminal like this: 
+"Based on the context provided in the FAQ database, you can replace REMOTE_URI with your own URI address by setting a local variable and assigning your URI address in the terminal like this:
 $ export REMOTE_URI=YourOwnURIAddress
 $ echo $REMOTE_URI
 Make sure to replace 'YourOwnURIAddress' with your desired URI address.","Solution description
@@ -8011,7 +8011,7 @@ Update your docker desktop if you haven’t done so.
 Or restart docker desktop and terminal and then build the image all over again.
 Or if all else fails, first run the following command: DOCKER_BUILDKIT=0  docker build .  then build your image.
 (optional) Added by Odimegwu David",0edeb016,What is the procedure to follow if restarting Docker Desktop and terminal fails to fix the metadata loading error?,machine-learning-zoomcamp,0.5881667
-"If all other solutions fail, the command you should run to build the Docker image without encountering the metadata error is: 
+"If all other solutions fail, the command you should run to build the Docker image without encountering the metadata error is:
 
 ```DOCKER_BUILDKIT=0 docker build .```","This error is produced sometimes when building your docker image from the Amazon python base image.
 Solution description: The following could solve the problem.
@@ -8062,7 +8062,7 @@ Solution description
 This error occurs when you import both tensorflow  and tflite_runtime.interpreter  “import tensorflow as tf” and “import tflite_runtime.interpreter as tflite” in the same notebook.  To fix the issue, restart the kernel and import only tflite_runtime.interpreter "" import tflite_runtime.interpreter as tflite"".
 Asia Saeed",da2f1cf4,What causes the issue when importing tensorflow and tflite_runtime.interpreter together?,machine-learning-zoomcamp,0.86731666
 "To avoid the InterpreterWrapper registration error, you should use the following import statement:
-`import tflite_runtime.interpreter as tflite` 
+`import tflite_runtime.interpreter as tflite`
 
 Make sure not to import both tensorflow and `tflite_runtime.interpreter` in the same notebook. Restart the kernel and import only `tflite_runtime.interpreter` to fix the issue.","When I run   import tflite_runtime.interpreter as tflite , I get an error message says “ImportError: generic_type: type ""InterpreterWrapper"" is already registered!”
 Solution description
@@ -9151,7 +9151,7 @@ Answer: TODO,TODO,6a417bfe,What are the first steps for Week 10 Kubernetes and T
 "Based on the information provided, to get started with Week 10 on Kubernetes and TensorFlow Serving, you can go to the GitHub repository for the course at: https://github.com/DataTalksClub/machine-learning-zoomcamp/blob/master/cohorts/2023/10-kubernetes/homework.md. Additionally, you can access relevant tutorials and resources on the GitHub repository for theory at: https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp. You can also watch the YouTube video associated with Week 10 at: https://www.youtube.com/watch?v=gmg5jw1bM8A&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=40.",TODO,6a417bfe,Can you guide me on beginning Week 10?,machine-learning-zoomcamp,0.01538377
 You should start Week 10 related to Kubernetes and TensorFlow Serving at this link: https://github.com/DataTalksClub/machine-learning-zoomcamp/blob/master/cohorts/2023/10-k8s-tfserving/homework.md.,TODO,6a417bfe,Where should I start for Week 10 related to Kubernetes and TensorFlow Serving?,machine-learning-zoomcamp,0.056836877
 "Based on the information provided, the starting guide for Week 10 activities is not specified in the FAQ database.",TODO,6a417bfe,Is there a starting guide for Week 10 activities?,machine-learning-zoomcamp,0.12669791
-"To initiate the tasks for Week 10 on Kubernetes and TensorFlow Serving, you can refer to the following links provided in the context: 
+"To initiate the tasks for Week 10 on Kubernetes and TensorFlow Serving, you can refer to the following links provided in the context:
 - section: 10. Kubernetes and TensorFlow Serving
 - GitHub for theory: https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp
 - YouTube Link: 5.X --- https://www.youtube.com/watch?v=agIFak9A3m8&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=49
@@ -9714,8 +9714,8 @@ The first step to install Kind through Go is to download and install Go from the
 > Proceed by installing Kind by following this command - go install sigs.k8s.io/kind@v0.20.0
 >Confirm Installation kind --version
 It works perfectly.",7c31bc9a,What is the first step to install Kind through Go?,machine-learning-zoomcamp,0.649369
-"To confirm that Go has been installed correctly, you can type the following command in Command Prompt: 
-go version 
+"To confirm that Go has been installed correctly, you can type the following command in Command Prompt:
+go version
 If Go has been installed correctly, you should see the version displayed.","If you are having challenges installing Kind through the Windows Powershell as provided on the website and Choco Library as I did, you can simply install Kind through Go.
 > Download and Install Go (https://go.dev/doc/install)
 > Confirm installation by typing the following in Command Prompt -  go version
@@ -11023,7 +11023,7 @@ packages: # Additional pip packages required by the service
 - pydantic
 Asia Saeed",15f361b7,"Why am I seeing 'Failed to import module ""service"": No module named 'sklearn'' in bentoml?",machine-learning-zoomcamp,0.8152004
 "To correct the bentofile.yaml error caused by writing 'sklearn' instead of 'scikit-learn', you need to modify the packages list in bentofile.yaml as follows:
-packages: 
+packages:
 - xgboost
 - scikit-learn
 - pydantic","I was getting the below error message when I was trying to create docker image using bentoml
@@ -11542,21 +11542,21 @@ Luke",2f28dcf1,How do I use matplotlib to visualize neural net class predictions
 "To convert dictionary values to a DataFrame table, you can use the following code:
 ```python
 df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""])
-```","You can convert the prediction output values to a datafarme using 
+```","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,How can I convert dictionary values to a DataFrame table?,machine-learning-zoomcamp,0.81904936
 "To transform prediction output values into a DataFrame, you can use the following method:
-df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])","You can convert the prediction output values to a datafarme using 
+df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,What is the method to transform prediction output values into a DataFrame?,machine-learning-zoomcamp,0.9455706
 "To change a dictionary to a DataFrame, you can use the code below:
-df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])","You can convert the prediction output values to a datafarme using 
+df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,What code do I use to change a dictionary to a DataFrame?,machine-learning-zoomcamp,0.81568897
-"To convert dictionary values to a DataFrame table, you can use the pd.DataFrame.from_dict method with the given parameters: df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""]).","You can convert the prediction output values to a datafarme using 
+"To convert dictionary values to a DataFrame table, you can use the pd.DataFrame.from_dict method with the given parameters: df = pd.DataFrame.from_dict(dict, orient='index', columns=[""Prediction""]).","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,How do I use pd.DataFrame.from_dict to convert dictionary values?,machine-learning-zoomcamp,0.8224672
-"No, I can't provide a sample code to convert a dictionary to a DataFrame.","You can convert the prediction output values to a datafarme using 
+"No, I can't provide a sample code to convert a dictionary to a DataFrame.","You can convert the prediction output values to a datafarme using
 df = pd.DataFrame.from_dict(dict, orient='index' , columns=[""Prediction""])
 Edidiong Esu",7a69cccf,Can you provide a sample code to convert a dictionary to a DataFrame?,machine-learning-zoomcamp,0.5207239
 The image dataset layout for the Kitchenware Classification Competition was different because some individuals were more comfortable with a setup different from what was used in the dino vs dragon lesson.,"The image dataset for the competition was in a different layout from what we used in the dino vs dragon lesson. Since that’s what was covered, some folks were more comfortable with that setup, so I wrote a script that would generate it for them
@@ -11771,7 +11771,7 @@ Which ide is recommended for machine learning?",1e60e888,Who added the informati
 (added by Tano Bugelli)
 How to install Conda environment in my local machine?
 Which ide is recommended for machine learning?",1e60e888,What steps are required to make my GitHub repository accessible to course correctors?,machine-learning-zoomcamp,0.48306814
-"To check if wget is installed in Google Colab, you can use the command: 
+"To check if wget is installed in Google Colab, you can use the command:
 ```
 !which wget
 ```","Install w get:

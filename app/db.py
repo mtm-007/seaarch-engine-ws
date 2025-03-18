@@ -2,7 +2,7 @@ import os
 import psycopg2
 from psycopg2.extras import DictCursor
 from datatime import datatime
-from zoneinfo import ZoneInfo 
+from zoneinfo import ZoneInfo
 
 tz = ZoneInfo("America/Los_Angeles")
 
@@ -59,15 +59,15 @@ def init_db():
 def save_conversations(conversation_id, question, answer_data, course, timestamp=None):
     if timestamp is None:
         timestamp = datatime.now(tz)
-    
+
     conn = get_db_connection()
-    try: 
+    try:
         with conn.cursor() as cur:
             cur.execute(
                 """
                 INSERT INTO conversations(
-                id, question, answer, course, model_used, response_time, relevance, 
-                relevance_explanation, prompt_tokens, completion_tokens, total_tokens, 
+                id, question, answer, course, model_used, response_time, relevance,
+                relevance_explanation, prompt_tokens, completion_tokens, total_tokens,
                 eval_prompt_tokens, eval_completion_tokens, eval_total_tokens, openai_cost, timestamp)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, COALESCE(%s, CURRENT_TIMESTAMP))
                 """,
@@ -94,13 +94,13 @@ def save_conversations(conversation_id, question, answer_data, course, timestamp
     finally:
         conn.close()
 
-    
+
 def save_feedback(conversation_id, feedback, timestamp=None):
     if timestamp is None:
         timestamp = datatime.now(tz)
-    
+
     conn = get_db_connection()
-    try: 
+    try:
         with conn.cursor() as cur:
             cur.execute(
                 "INSERT INTO feedback(conversation_id, feedback, timestamp) VALUES( %s, %s, COALESCE(%s, CURRENT_TIMESTAMP))",
@@ -118,7 +118,7 @@ def get_recent_conversations(limit=5, relevance=None):
             query = """
             SELECT c.*, f.feedback
             FROM conversations c
-            LEFT JOIN feedback f ON c.id = f.conversation_id 
+            LEFT JOIN feedback f ON c.id = f.conversation_id
             """"
             if relevance:
                 query += f" WHERE c.relavance = '{relavance}' "
@@ -128,7 +128,7 @@ def get_recent_conversations(limit=5, relevance=None):
             return cur.fetchall()
     finally:
         conn.close()
-    
+
 
 def get_feedback_stats():
     conn = get_db_connection()
@@ -139,7 +139,7 @@ def get_feedback_stats():
             SELECT
                 SUM(CASE WHEN feedback > 0 THEN 1 ELSE 0 END) as thumps_up,
                 SUM(CASE WHEN feedback < 0 THEN 1 ELSE 0 END) as thumps_down
-            FROM feedback 
+            FROM feedback
             """)
             return cur.fetchone()
     finally:
