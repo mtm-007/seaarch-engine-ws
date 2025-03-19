@@ -2,9 +2,9 @@ import streamlit as st
 import time
 import uuid
 
-from assitant import get_answer
+from assistant import get_answer
 from db import(
-    save_conversations,
+    save_conversation,
     save_feedback,
     get_recent_conversations,
     get_feedback_stats,

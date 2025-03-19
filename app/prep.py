@@ -89,11 +89,11 @@ def main():
     # if you just want to init the db or didn't want to re-index
     print("Staring the indexing process...")
     
-    documents = fetch_documents()
-    ground_truth = fetch_ground_truth()
-    model = load_model()
-    es_client = setup_elasticsearch()
-    index_documents(es_client, documents, model)
+    # documents = fetch_documents()
+    # ground_truth = fetch_ground_truth()
+    # model = load_model()
+    # es_client = setup_elasticsearch()
+    # index_documents(es_client, documents, model)
     # ending HERE
 
     print(f"Initializing database...")
