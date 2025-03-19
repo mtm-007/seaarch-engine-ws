@@ -4,17 +4,18 @@ import json
 
 from openai import OpenAI
 from elasticsearch import Elasticsearch
-from sentence_transformers import SentenceTransformers
+from sentence_transformers import SentenceTransformer
+
 
 ELASTIC_URL = os.getenv("ELASTIC_URL", "http://localhost:9200")
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://ollama:11434/v1/")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 es_client = Elasticsearch(ELASTIC_URL)
-ollama_client = OpenAI(OLLAMA_URL)
+ollama_client = OpenAI(base_url=OLLAMA_URL, api_key="ollama" )
 openai_client = OpenAI(api_key = OPENAI_API_KEY)
 
-model = SentenceTransformers("multi-qa-MiniLM-L6-cos-v1")
+model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
 
 
 def elastic_search_text(query,course, index_name="course-questions"):
