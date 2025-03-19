@@ -1,7 +1,7 @@
 import os
 import psycopg2
 from psycopg2.extras import DictCursor
-from datatime import datatime
+from datetime import datetime
 from zoneinfo import ZoneInfo
 
 tz = ZoneInfo("America/Los_Angeles")
@@ -12,7 +12,7 @@ def get_db_connection():
         host = os.getenv("POSTGRES_HOST", "postgres"),
         database = os.getenv("POSTGRES_DB", "course_assitant"),
         user = os.getenv("POSTGRES_USER", "user_name"),
-        password = os.getenv("POSTGRES_PASSWORD", "sample_password")
+        password = os.getenv("POSTGRES_PASSWORD", "sample_password"),
     )
 
 
@@ -23,42 +23,42 @@ def init_db():
             cur.execute("DROP TABLE IF EXISTS feedback")
             cur.execute("DROP TABLE IF EXISTS conversations")
 
-        conn.execute("""
-            CREATE TABLE conversations(
-                id TEXT PRIMARY KEY,
-                question TEXT NOT NULL,
-                answer TEXT NOT NULL,
-                course TEXT NOT NULL,
-                model_used TEXT NOT NULL,
-                response_time FLOAT NOT NULL,
-                relevance TEXT NOT NULL,
-                relevance_explanation TEXT NOT NULL,
-                prompt_tokens INTEGER NOT NULL,
-                completion_tokens INTEGER NOT NULL,
-                total_tokens INTEGER NOT NULL,
-                eval_prompt_tokens INTEGER NOT NULL,
-                eval_completion_tokens INTEGER NOT NULL,
-                eval_total_tokens INTEGER NOT NULL,
-                openai_cost FLOAT NOT NULL,
-                timestamp TIMESTAMP WITH TIME ZONE NOT NULL
-            )
-        """)
-        cur.execute("""
-            CREATE TABLE feedback(
-                id SERIAL PRIMARY KEY,
-                conversation_id TEXT REFERENCES conversations(id),
-                feedback INTEGER NOT NULL,
-                timestamp TIMESTAMP WITH TIME ZONE NOT NULL
-            )
-        """)
-    conn.commit()
+            cur.execute("""
+                CREATE TABLE conversations(
+                    id TEXT PRIMARY KEY,
+                    question TEXT NOT NULL,
+                    answer TEXT NOT NULL,
+                    course TEXT NOT NULL,
+                    model_used TEXT NOT NULL,
+                    response_time FLOAT NOT NULL,
+                    relevance TEXT NOT NULL,
+                    relevance_explanation TEXT NOT NULL,
+                    prompt_tokens INTEGER NOT NULL,
+                    completion_tokens INTEGER NOT NULL,
+                    total_tokens INTEGER NOT NULL,
+                    eval_prompt_tokens INTEGER NOT NULL,
+                    eval_completion_tokens INTEGER NOT NULL,
+                    eval_total_tokens INTEGER NOT NULL,
+                    openai_cost FLOAT NOT NULL,
+                    timestamp TIMESTAMP WITH TIME ZONE NOT NULL
+                )
+            """)
+            cur.execute("""
+                CREATE TABLE feedback(
+                    id SERIAL PRIMARY KEY,
+                    conversation_id TEXT REFERENCES conversations(id),
+                    feedback INTEGER NOT NULL,
+                    timestamp TIMESTAMP WITH TIME ZONE NOT NULL
+                )
+            """)
+        conn.commit()
     finally:
         conn.close()
 
 
 def save_conversations(conversation_id, question, answer_data, course, timestamp=None):
     if timestamp is None:
-        timestamp = datatime.now(tz)
+        timestamp = datetime.now(tz)
 
     conn = get_db_connection()
     try:
@@ -97,7 +97,7 @@ def save_conversations(conversation_id, question, answer_data, course, timestamp
 
 def save_feedback(conversation_id, feedback, timestamp=None):
     if timestamp is None:
-        timestamp = datatime.now(tz)
+        timestamp = datetime.now(tz)
 
     conn = get_db_connection()
     try:
@@ -114,14 +114,14 @@ def save_feedback(conversation_id, feedback, timestamp=None):
 def get_recent_conversations(limit=5, relevance=None):
     conn = get_db_connection()
     try:
-        with.conn.cursor(cursor_factory = DictCursor) as cur:
+        with conn.cursor(cursor_factory = DictCursor) as cur:
             query = """
-            SELECT c.*, f.feedback
-            FROM conversations c
-            LEFT JOIN feedback f ON c.id = f.conversation_id
-            """"
+                SELECT c.*, f.feedback
+                FROM conversations c
+                LEFT JOIN feedback f ON c.id = f.conversation_id
+                """
             if relevance:
-                query += f" WHERE c.relavance = '{relavance}' "
+                query += f" WHERE c.relevance = '{relevance}' "
             query += " ORDER BY c.timestamp DESC LIMIT %s"
 
             cur.execute(query, (limit,))
@@ -136,10 +136,10 @@ def get_feedback_stats():
     try:
         with conn.cursor(cursor_factory =DictCursor) as cur:
             cur.execute("""
-            SELECT
-                SUM(CASE WHEN feedback > 0 THEN 1 ELSE 0 END) as thumps_up,
-                SUM(CASE WHEN feedback < 0 THEN 1 ELSE 0 END) as thumps_down
-            FROM feedback
+                SELECT
+                    SUM(CASE WHEN feedback > 0 THEN 1 ELSE 0 END) as thumps_up,
+                    SUM(CASE WHEN feedback < 0 THEN 1 ELSE 0 END) as thumps_down
+                FROM feedback
             """)
             return cur.fetchone()
     finally:

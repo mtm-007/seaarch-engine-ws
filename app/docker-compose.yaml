@@ -6,9 +6,9 @@ services:
     container_name : elasticsearch
     environment :
       - discovery.type=single-node
-      - xpack.securtity.enabled=false
+      - xpack.security.enabled=false
     ports:
-      - "${ELASTIC_PORT: -9200}:9200"
+      - "${ELASTIC_PORT:-9200}:9200"
       - "9300:9300"
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
@@ -18,12 +18,12 @@ services:
     container_name: ollama
     volumes:
       - ollama_data:/root/.ollama
-    port:
-      "${OLLAMA_PORT:-11434}:11434"
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
 
   postgres:
     image: postgres:13
-    cotainer_name: postgres
+    container_name: postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
