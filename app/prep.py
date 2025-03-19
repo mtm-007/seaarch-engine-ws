@@ -79,7 +79,7 @@ def index_documents(es_client, documents, model):
     for doc in tqdm(documents):
         question = doc['question']
         text = doc['text']
-        doc['question_text_vector'] = model.encode(question + " " + text).to_list()
+        doc['question_text_vector'] = model.encode(question + " " + text).tolist()
         es_client.index(index= INDEX_NAME, document= doc)
     print(f"Indexed {len(documents)} documents")
 
@@ -88,7 +88,7 @@ def main():
     # you may consider to comment stating HERE
     # if you just want to init the db or didn't want to re-index
     print("Staring the indexing process...")
-
+    
     documents = fetch_documents()
     ground_truth = fetch_ground_truth()
     model = load_model()

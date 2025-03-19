@@ -6,8 +6,8 @@ from openai import OpenAI
 from elasticsearch import Elasticsearch
 from sentence_transformers import SentenceTransformers
 
-ELASTIC_URL = os.getenv("ELASTIC_URL", "http")
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http/")
+ELASTIC_URL = os.getenv("ELASTIC_URL", "http://localhost:9200")
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://ollama:11434/v1/")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 es_client = Elasticsearch(ELASTIC_URL)
