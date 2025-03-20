@@ -8,8 +8,8 @@ services:
       - discovery.type=single-node
       - xpack.security.enabled=false
     ports:
-      - "${ELASTIC_PORT:-9200}:9200"
-      - "9300:9300"
+      - "${ELASTIC_PORT:-9201}:9200"
+      - "9301:9300"
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
 
