@@ -68,7 +68,9 @@ def setup_elasticsearch():
         },
     }
 
+    print(f"Elastic Search index: {INDEX_NAME} creation starts here...")
     es_client.indices.delete(index=INDEX_NAME, ignore_unavailable=True)
+    print("checking if index already exists complete....")
     es_client.indices.create(index = INDEX_NAME, body = index_settings)
     print(f"Elasticsearch INDEX: '{INDEX_NAME}' created")
     return es_client
