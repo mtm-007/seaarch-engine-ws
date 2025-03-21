@@ -68,9 +68,7 @@ def setup_elasticsearch():
         },
     }
 
-    print(f"Elastic Search index: {INDEX_NAME} creation starts here...")
     es_client.indices.delete(index=INDEX_NAME, ignore_unavailable=True)
-    print("checking if index already exists complete....")
     es_client.indices.create(index = INDEX_NAME, body = index_settings)
     print(f"Elasticsearch INDEX: '{INDEX_NAME}' created")
     return es_client
@@ -87,8 +85,10 @@ def index_documents(es_client, documents, model):
 
 
 def main():
+    # you may consider to comment stating HERE
     # if you just want to init the db or didn't want to re-index
     print("Staring the indexing process...")
+    
     documents = fetch_documents()
     ground_truth = fetch_ground_truth()
     model = load_model()
