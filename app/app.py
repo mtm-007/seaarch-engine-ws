@@ -45,7 +45,7 @@ def main():
 
             # Save conversation to database
             print_log("Saving conversation to database")
-            save_conversation(st.session_state.conversation_id, user_input, answer_data, course)
+            save_conversation(st.session_state.conversation_id, user_input, output, course)
             print_log("Conversation saved successfully")
         
     # Feedback buttons

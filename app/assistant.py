@@ -48,7 +48,7 @@ CONTEXT:
 
 def llm(prompt):
     response = client.chat.completions.create(
-        model = "phi3",
+        model = "llama3.2:1b",#"phi3",
         messages = [{"role" : "user", "content": prompt}]
     )
     return response.choices[0].message.content
