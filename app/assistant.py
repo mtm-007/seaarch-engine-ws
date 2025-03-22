@@ -53,7 +53,7 @@ def elastic_search_knn(field, vector, course, index_name="course-questions"):
     }
 
     es_result = es_client.search( index = index_name, body = search_query)
-    return [hit['_source'] for hit in response['hits']['hits']]
+    return [hit['_source'] for hit in es_result['hits']['hits']]
 
 
 def build_prompt(query, search_results):
@@ -143,9 +143,9 @@ def calculate_openai_cost(model_choice, tokens):
     openai_cost = 0
 
     if model_choice == 'openai/gpt-4o-mini':# check current openai pricing
-        openai_cost = (tokens['prompt_tokens']* 0.0015 + tokens['completion_tokens'] * 0.002) / 1000
+        openai_cost = (tokens['prompt_tokens']* 0.15 + tokens['completion_tokens'] * 0.6) / 1000
     elif model_choice == 'openai/gpt-4o':
-        openai_cost = (tokens['prompt_tokens']* 0.03 + tokens['completion_tokens'] * 0.06) / 1000
+        openai_cost = (tokens['prompt_tokens']* 1.25 + tokens['completion_tokens'] * 10.0) / 1000
 
     return openai_cost
 
