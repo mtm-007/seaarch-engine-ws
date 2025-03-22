@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from db import save_conversation, save_feedback, get_db_connection
 
-tz = ZoneInfo('America/Los Angelos')
+tz = ZoneInfo("America/Los_Angeles")
 
 
 # List of sample questions and answers
@@ -40,7 +40,7 @@ def generate_synthetic_data(start_time, end_time):
         answer = random.choice(SAMPLE_ANSWERS)
         course = random.choice(COURSES)
         model = random.choice(MODELS)
-        relavance = random.choice(RELEVANCE)
+        relevance = random.choice(RELEVANCE)
 
 
         openai_cost = 0
@@ -74,7 +74,7 @@ def generate_synthetic_data(start_time, end_time):
             )
         
         current_time += timedelta(minutes=random.randint(1,15))
-        current_count += 1
+        conversation_count += 1
         if conversation_count % 10 ==0:
             print(f"Generated {conversation_count} conversation so far...")
 
