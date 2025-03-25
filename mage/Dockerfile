@@ -16,4 +16,6 @@ RUN pip3 install --no-cache-dir "git+https://github.com/mage-ai/mage-ai.git@td--
 
 ENV PYTHONPATH="${PYTHONPATH}:${MAGE_CODE_PATH}/${PROJECT_NAME}"
 
+RUN python -m spacy download en_core_web_sm
+
 CMD ["/bin/sh", "-c", "/app/run_app.sh"]

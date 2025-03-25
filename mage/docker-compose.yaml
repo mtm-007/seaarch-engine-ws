@@ -9,10 +9,12 @@ services:
       - "6789:6789"
     volumes:
       # Mount your local codebase to the container.
-      - .:/$MAGE_CODE_PATH
+      #- .:/$MAGE_CODE_PATH
+      - .:${MAGE_CODE_PATH}
       # Store the data output on local machine to easily debug (optional).
-      - ~/.mage_data:/$MAGE_CODE_PATH/mage_data
-    retart: on-failure:5
+      #- ~/.mage_data:/${MAGE_CODE_PATH}/mage_data
+      - ~/.mage_data:${MAGE_CODE_PATH}/mage_data
+    restart: on-failure:5
     networks: 
       - app-network
     depends_on:
@@ -21,7 +23,7 @@ services:
     tty: true #for interactive debugging
   
   magic-database:
-    image: pgvector/pgvector: 0.6.0-pg16
+    image: pgvector/pgvector:0.6.0-pg16
     env_file:
       - .env.dev
     ports: 
