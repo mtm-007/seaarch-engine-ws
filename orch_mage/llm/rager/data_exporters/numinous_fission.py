@@ -12,7 +12,12 @@ def elasticsearch(documents: List[Dict[str, Union[Dict, List[int], str]]], *args
     number_of_shards = kwargs.get('number_of_shards', 1)
     number_of_replicas = kwargs.get('number_of_replicas', 0)
     dimensions = kwargs.get('dimensions')
-
+    #debuging print logs
+    print(f"Number of documents received: {len(documents)}")
+    if not documents:
+        print("No documents to export")
+        return []
+    #end of print logs
     if dimensions is None and len(documents) > 0:
         document = documents[0]
         dimensions = len(document.get('embedding') or [])

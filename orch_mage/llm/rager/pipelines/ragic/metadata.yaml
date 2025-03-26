@@ -30,7 +30,7 @@ blocks:
   language: python
   name: Runic oblivion
   retry_config: null
-  status: not_executed
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
@@ -49,7 +49,7 @@ blocks:
   language: python
   name: Radiant photon
   retry_config: null
-  status: not_executed
+  status: failed
   timeout: null
   type: transformer
   upstream_blocks: []
@@ -88,8 +88,7 @@ blocks:
       spacy_embeddings:
         variables:
           model_name: en_core_web_sm
-  downstream_blocks:
-  - phantasmal_mirage
+  downstream_blocks: []
   executor_config: null
   executor_type: local_python
   groups:
@@ -98,7 +97,7 @@ blocks:
   language: python
   name: Prismatic axiom
   retry_config: null
-  status: not_executed
+  status: failed
   timeout: null
   type: transformer
   upstream_blocks: []
@@ -127,8 +126,7 @@ blocks:
           number_of_replicas: 0
           number_of_shards: 1
           vector_column_name: embedding
-  downstream_blocks:
-  - phantasmal_aura
+  downstream_blocks: []
   executor_config: null
   executor_type: local_python
   groups:
@@ -137,64 +135,11 @@ blocks:
   language: python
   name: Numinous fission
   retry_config: null
-  status: not_executed
+  status: failed
   timeout: null
   type: data_exporter
   upstream_blocks: []
   uuid: numinous_fission
-- all_upstream_blocks_executed: false
-  color: null
-  configuration:
-    file_source:
-      path: rager/transformers/phantasmal_mirage.py
-    templates:
-      spacy_embeddings:
-        variables:
-          model_name: en_core_web_sm
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  groups:
-  - embed
-  has_callback: false
-  language: python
-  name: Phantasmal mirage
-  retry_config: null
-  status: not_executed
-  timeout: null
-  type: transformer
-  upstream_blocks:
-  - prismatic_axiom
-  uuid: phantasmal_mirage
-- all_upstream_blocks_executed: false
-  color: null
-  configuration:
-    file_source:
-      path: rager/data_exporters/phantasmal_aura.py
-    templates:
-      elasticsearch:
-        variables:
-          connection_string: http://localhost:9200
-          dimensions: null
-          index_name: documents
-          number_of_replicas: 0
-          number_of_shards: 1
-          vector_column_name: embedding
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  groups:
-  - vector_database
-  has_callback: false
-  language: python
-  name: Phantasmal aura
-  retry_config: null
-  status: not_executed
-  timeout: null
-  type: data_exporter
-  upstream_blocks:
-  - numinous_fission
-  uuid: phantasmal_aura
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
