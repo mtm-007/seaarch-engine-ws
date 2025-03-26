@@ -1,0 +1,107 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1742942679
+      name: eldritch_augment.py
+      output: null
+      path: /home/src/llm/rager/data_loaders/eldritch_augment.py
+      relative_path: llm/rager/data_loaders/eldritch_augment.py
+      size: 1550
+    file_source:
+      path: rager/data_loaders/eldritch_augment.py
+    templates:
+      api:
+        variables:
+          auth_token: null
+          endpoint: ' https://raw.githubusercontent.com/DataTalksClub/llm-zoomcamp/main/01-intro/documents.json'
+          method: GET
+          parser: null
+          timeout: 30
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - ingest
+  has_callback: false
+  language: python
+  name: Eldritch augment
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: eldritch_augment
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/sublime_glyph.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - chunking
+  has_callback: false
+  language: python
+  name: Sublime glyph
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: sublime_glyph
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/stellar_rune.py
+    templates:
+      lemmatization_spacy:
+        variables:
+          handle_stopwords: false
+          language: en
+          use_pos_tags: true
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - tokenization
+  has_callback: false
+  language: python
+  name: Stellar rune
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks: []
+  uuid: stellar_rune
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-03-25 22:34:53.698993+00:00'
+data_integration: null
+description: null
+execution_framework: rag
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Chromatic apex
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: chromatic_apex
+variables_dir: /home/src/mage_data/rager
+widgets: []
