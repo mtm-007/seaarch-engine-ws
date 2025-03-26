@@ -88,7 +88,8 @@ blocks:
       spacy_embeddings:
         variables:
           model_name: en_core_web_sm
-  downstream_blocks: []
+  downstream_blocks:
+  - phantasmal_mirage
   executor_config: null
   executor_type: local_python
   groups:
@@ -109,24 +110,25 @@ blocks:
       content: null
       extension: py
       language: python
-      modified_timestamp: 1722154146
+      modified_timestamp: 1742951288
       name: numinous_fission.py
       output: null
-      path: /home/src/default_repo/llm/rager/data_exporters/numinous_fission.py
+      path: /home/src/llm/rager/data_exporters/numinous_fission.py
       relative_path: llm/rager/data_exporters/numinous_fission.py
-      size: 2054
+      size: 2087
     file_source:
       path: rager/data_exporters/numinous_fission.py
     templates:
       elasticsearch:
         variables:
-          connection_string: http://host.docker.internal:9200
+          connection_string: http://elasticsearch:9200
           dimensions: null
           index_name: documents
           number_of_replicas: 0
           number_of_shards: 1
           vector_column_name: embedding
-  downstream_blocks: []
+  downstream_blocks:
+  - phantasmal_aura
   executor_config: null
   executor_type: local_python
   groups:
@@ -140,6 +142,59 @@ blocks:
   type: data_exporter
   upstream_blocks: []
   uuid: numinous_fission
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/phantasmal_mirage.py
+    templates:
+      spacy_embeddings:
+        variables:
+          model_name: en_core_web_sm
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - embed
+  has_callback: false
+  language: python
+  name: Phantasmal mirage
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - prismatic_axiom
+  uuid: phantasmal_mirage
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: rager/data_exporters/phantasmal_aura.py
+    templates:
+      elasticsearch:
+        variables:
+          connection_string: http://localhost:9200
+          dimensions: null
+          index_name: documents
+          number_of_replicas: 0
+          number_of_shards: 1
+          vector_column_name: embedding
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - vector_database
+  has_callback: false
+  language: python
+  name: Phantasmal aura
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - numinous_fission
+  uuid: phantasmal_aura
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -163,5 +218,5 @@ spark_config: {}
 tags: []
 type: python
 uuid: ragic
-variables_dir: /root/.mage_data/rager
+variables_dir: /home/src/mage_data/rager
 widgets: []
