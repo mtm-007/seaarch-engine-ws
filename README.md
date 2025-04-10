@@ -28,5 +28,5 @@ docker run -it -d \
     -p 9300:9300 \
     -e "discovery.type=single-node" \
     -e "xpack.security.enabled=false" \
-    docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+    docker.elastic.co/elasticsearch/elasticsearch:8.9.0
 """
